@@ -27,6 +27,30 @@ h3{
     font-size: 20px;
 }
 
+#Home{
+    padding: 10px;
+    display:inline-block;
+    font-size: 20px;
+    background-color: white;
+    margin: 20px;
+    margin-left: 1200px;
+    border: 2px solid #2574A9;
+    border-radius: 10%;
+}
+
+#Home a{
+    text-decoration: none;
+    color: black;
+}
+
+#Home:hover {
+    background-color: #1B2631;
+}
+
+#Home a:hover {
+    color: white;
+}
+
 #SelectRhythm{
     text-align: center;
     vertical-align: center;
