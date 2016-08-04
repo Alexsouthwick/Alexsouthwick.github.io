@@ -1,0 +1,256 @@
+<br>
+<br>
+<center>
+<button type="button" id="btn">Play The Song</button>
+</center>
+<center>
+<button type="button" id="btn2">Pause The Song</button>
+</center>
+<br>
+<br>
+<br>
+<button type="button" id="btn3">Melody 1 - Click Me!</button>
+<br>
+<br>
+<br>
+<button type="button" id="btn4">Melody 2 - Click Me!</button>
+<br>
+<br>
+<br>
+<button type="button" id="btn5">Melody 3 - Click Me!</button>
+<br>
+<br>
+<br>
+<button type="button" id="btn6">Melody 4 - Click Me!</button>
+
+<script>
+var song = "";
+//play and pause button with a sample song
+document.getElementById('btn').onclick = function() {
+
+    var audio = new window.webkitAudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        song = "edcdeee-ddd-eee-edcdeee-cddedc---";
+
+    setInterval(play, 1000 / 4);
+
+    function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    }
+
+    function play() {
+        var note = song.charAt(position),
+            freq = scale[note];
+        position += 1;
+        if(position >= song.length) {
+            position = 0;
+        }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+};
+document.getElementById('btn2').onclick = function() {
+    song = "";
+};
+
+// My First Melody button -- it plays the "egbc" melody
+document.getElementById('btn3').onclick = function() {
+    var audio = new window.webkitAudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        melody1="egbc";
+
+    setInterval(play, 1000 / 4);
+
+     function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    };
+
+      function play() {
+        var note = melody1.charAt(position),
+            freq = scale[note];
+        position += 1;
+        // if(position >= melody1.length) {
+        //     position = 0;
+        // }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+
+};
+
+// My Second Melody button -- it plays the "fgba" melody
+document.getElementById('btn4').onclick = function() {
+    var audio = new window.webkitAudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        melody2="fgba";
+
+    setInterval(play, 1000 / 4);
+
+     function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    };
+
+      function play() {
+        var note = melody2.charAt(position),
+            freq = scale[note];
+        position += 1;
+        // if(position >= melody1.length) {
+        //     position = 0;
+        // }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+
+};
+
+
+// My Third Melody button -- it plays the "gbdf" melody
+document.getElementById('btn5').onclick = function() {
+    var audio = new window.webkitAudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        melody3="gbdf";
+
+    setInterval(play, 1000 / 4);
+
+     function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    };
+
+      function play() {
+        var note = melody3.charAt(position),
+            freq = scale[note];
+        position += 1;
+        // if(position >= melody1.length) {
+        //     position = 0;
+        // }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+
+};
+
+// My Fourth Melody button -- it plays the "egca" melody
+document.getElementById('btn6').onclick = function() {
+    var audio = new window.webkitAudioContext(),
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        melody4="egca";
+
+    setInterval(play, 1000 / 4);
+
+     function createOscillator(freq) {
+        var osc = audio.createOscillator();
+
+        osc.frequency.value = freq;
+        osc.type = "square";
+        osc.connect(audio.destination);
+        osc.start(0);
+
+        setTimeout(function() {
+            osc.stop(0);
+            osc.disconnect(audio.destination);
+        }, 1000 / 4)
+    };
+
+      function play() {
+        var note = melody4.charAt(position),
+            freq = scale[note];
+        position += 1;
+        // if(position >= melody1.length) {
+        //     position = 0;
+        // }
+        if(freq) {
+            createOscillator(freq);
+        }
+    }
+
+};
+</script>
