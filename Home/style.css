@@ -1,0 +1,65 @@
+.navigation{
+    background-color: #1A5276;
+    height: 90px;
+    border: 3px solid #2574A9;
+
+}
+.link{
+    padding: 10px;
+    display:inline-block;
+    font-size: 20px;
+    background-color: white;
+    margin: 20px;
+    margin-right: 0px;
+    border: 2px solid #2574A9;
+}
+
+.link a{
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    background-color: #1B2631;
+}
+
+.link a:hover {
+    color: white;
+}
+
+body {
+    background-color: #85C1E9;
+}
+
+h1{
+    color: black;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+p{
+    text-align: center;
+}
+
+.image img{
+    width:50%;
+    height: auto;
+    margin-left: 350px;
+    border: 3px solid #2574A9;
+
+
+}
+button{
+    width:200px;
+    height:100px;
+    background-color: #1A5276;
+    border: 2px solid #2574A9;
+    color:white;
+    font-size: 20px;
+    border-radius: 10%;
+    margin-left:570px;
+
+
+}
