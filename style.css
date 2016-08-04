@@ -91,7 +91,14 @@ h4{
 button {
     width:100px;
     height:30px;
+}
 
+#playstop{
+    float: right;
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    margin-right: 20px;
 }
 
 .Scroller{
@@ -124,7 +131,6 @@ button {
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
-
 }
 
 
