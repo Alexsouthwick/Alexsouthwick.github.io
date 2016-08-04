@@ -18,6 +18,15 @@ h4{
     font-size: 20px;
 }
 
+h3{
+    color: white;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
 #SelectRhythm{
     text-align: center;
     vertical-align: center;
@@ -134,9 +143,7 @@ button {
 }
 
 
-.highlighted {
-margin-top: 0px;
-padding-top: 0px;   
+.highlighted {   
     background-color:   #FFD700;
     position:static;
    /* padding-top: 28px;*/
