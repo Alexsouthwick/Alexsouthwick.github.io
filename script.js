@@ -13,7 +13,6 @@ var highlight=false;
 var combined_width= 0;
 var song= "";
 
-
 $(document).ready(function() {
     console.log("something should happen1")
 
@@ -39,40 +38,40 @@ $(document).ready(function() {
                 var draggableid= ui.draggable.attr("id");
                 console.log(droppableid);
                 if (droppableid == "block1"){
-                    $("#block1").text(draggableid);
+                    $("#block1 h4").text(draggableid);
                 }
                 if (droppableid == "block2"){
-                    $("#block2").text(draggableid);
+                    $("#block2 h4").text(draggableid);
                 }
                 if (droppableid == "block3"){
-                    $("#block3").text(draggableid);
+                    $("#block3 h4").text(draggableid);
                 }
                 if (droppableid == "block4"){
-                    $("#block4").text(draggableid);
+                    $("#block4 h4").text(draggableid);
                 }
                 if (droppableid == "block5"){
-                    $("#block5").text(draggableid);
+                    $("#block5 h4").text(draggableid);
                 }
                 if (droppableid == "block6"){
-                    $("#block6").text(draggableid);
+                    $("#block6 h4").text(draggableid);
                 }
                 if (droppableid == "block7"){
-                    $("#block7").text(draggableid);
+                    $("#block7 h4").text(draggableid);
                 }
                 if (droppableid == "block8"){
-                    $("#block8").text(draggableid);
+                    $("#block8 h4").text(draggableid);
                 }
                 if (droppableid == "block9"){
-                    $("#block9").text(draggableid);
+                    $("#block9 h4").text(draggableid);
                 }
                 if (droppableid == "block10"){
-                    $("#block10").text(draggableid);
+                    $("#block10 h4").text(draggableid);
                 }
                 if (droppableid == "block11"){
-                    $("#block11").text(draggableid);
+                    $("#block11 h4").text(draggableid);
                 }
                 if (droppableid == "block12"){
-                    $("#block12").text(draggableid);
+                    $("#block12 h4").text(draggableid);
                 }
 
 
