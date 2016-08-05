@@ -139,7 +139,7 @@ $(document).ready(function() {
             }
             }
     });
-hh
+
     $("#Disney").hide();
     $("#Allegro").hide();
     
