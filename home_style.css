@@ -131,17 +131,17 @@ button{
 }
 
 .JournalImage img{
-width:400px;
+width:600px;
 height:auto;
 margin-top: -10px;
 }
 .JournalImage {
-    margin-left: 400px;
+    margin-left: 350px;
 }
 #img2 img{
     width:auto;
     height:300px;
-    margin-left:-200px;
+    margin-left:-150px;
 }
 
 .photo img{

@@ -113,6 +113,10 @@ h3{
     border: 2px solid #021a40;
 }
 
+.draggable:hover{
+    background-color: #081555;
+}
+
 .Sidebar{
     width: 300px;
     height: 800px;
@@ -198,7 +202,6 @@ button {
     text-align: center;
     background-color: #85C1E9;
 }
-
 
 .highlighted {   
     background-color:   #FFD700;
