@@ -144,6 +144,7 @@ button {
     overflow-x:scroll;
     margin:20px;
     float: right;
+    background-color: white;
 }
 
 .DropBar{
@@ -164,6 +165,7 @@ button {
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
+    background-color: #85C1E9;
 }
 
 
