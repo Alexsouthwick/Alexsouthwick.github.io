@@ -6,6 +6,7 @@ h1 {
     color: black;
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
+    font-size: 40px;
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
 
@@ -18,13 +19,14 @@ h4{
 }
 
 h3{
-    color: #85C1E9;
+    /*color: #85C1E9;*/
+    color:black;
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
-    text-shadow: -1px 0 #2574A9, 0 1px #2574A9, 1px 0 #2574A9, 0 -1px #2574A9;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
 #Home{

@@ -39,10 +39,36 @@ h1{
     font-size: 40px;
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
 }
+h3{
+    color:black;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+
+}
+
+h4{
+    color:black;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.paragraph{
+    width:450px;
+    margin-left: 445px;
+}
+
 p{
     text-align: center;
 }
-
+#Entry{
+    padding: 40px;
+    text-align: left;
+}
 .image img{
     width:50%;
     height: auto;
@@ -60,7 +86,7 @@ button{
     color:white;
     font-size: 20px;
     border-radius: 10%;
-    margin-left:570px;
+    margin-left:590px;
 }
 #button{
     padding: 10px;

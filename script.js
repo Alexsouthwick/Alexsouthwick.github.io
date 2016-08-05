@@ -132,6 +132,39 @@ $(document).ready(function() {
                  song += "ced"; 
                  console.log(song);  
                  }
+                 else if (draggableid=="C E G C"){
+                 song += "cegc"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="D E G C"){
+                 song += "degc"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E G C E"){
+                 song += "cegce"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="D A G C A"){
+                 song += "dagca"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E G C E G"){
+                 song += "cegceg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="F A C E F C"){
+                 song += "facefc"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="G E C A C E G"){
+                 song += "gecaceg"; 
+                 console.log(song);  
+                 }
+
+                else if (draggableid=="A D G B C G E"){
+                 song += "adgbcge"; 
+                 console.log(song);  
+                 }
 
                 else
                     {console.log("else happened")}
@@ -257,6 +290,9 @@ $(document).ready(function() {
     $(".TwoNote").hide();
     $(".ThreeNote").hide();
     $(".FourNote").hide();
+    $(".FiveNote").hide();
+    $(".SixNote").hide();
+    $(".SevenNote").hide();
 
     $('#One').click(function(){
         var One_clicked = "clicked";
