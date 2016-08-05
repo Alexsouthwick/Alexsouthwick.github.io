@@ -51,11 +51,11 @@ h3{
 
 h4{
     color:black;
-    font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: -10px;
+    font-size:20px;
 }
 .paragraph{
     width:450px;
@@ -65,9 +65,11 @@ h4{
 p{
     text-align: center;
 }
-#Entry{
-    padding: 40px;
+#entry{
+    margin-top: -30px;
+    padding: 20px;
     text-align: left;
+    line-height: 30px;
 }
 .image img{
     width:50%;
@@ -109,4 +111,23 @@ button{
 
 #button a:hover {
     color: white;
+}
+
+.journal_entry{
+    margin:10px;
+    background-color: white;
+}
+
+.JournalImage img{
+width:400px;
+height:auto;
+margin-top: -10px;
+}
+.JournalImage {
+    margin-left: 400px;
+}
+#img2 img{
+    width:auto;
+    height:300px;
+    margin-left:-200px;
 }
