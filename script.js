@@ -31,6 +31,7 @@ var Allegro_selected = false;
 var Disney_clicked = "notclicked";
 var Allegro_clicked = "notclicked";
 var NoteValue = 0
+var beatlist = []
 
 $(document).ready(function() {
 
@@ -138,7 +139,7 @@ $(document).ready(function() {
             }
             }
     });
-
+hh
     $("#Disney").hide();
     $("#Allegro").hide();
     
@@ -217,9 +218,10 @@ $(document).ready(function() {
 
 
         $(".measure").each(function( index, element){
-            var thisNote = str.substring(index,index);
+            var thisNote = song.substring(index,index);
             if ($(this).is("#QuarterNote")){
                 NoteValue = 4;
+                beatlist.append("QuarterNote")
             }
             else if ($(this).is("#EighthNote")){
                 NoteValue = 8;
@@ -235,13 +237,13 @@ $(document).ready(function() {
             }
             else if ($(this).is("#HalfNote")){
                 NoteValue = 2;
+            }
 
             dict.push({
                 key: thisNote,
                 value: NoteValue
             });
-            console.log(dict);
-            
+            // console.log(dict);  
         });
     };
 
@@ -249,7 +251,7 @@ $(document).ready(function() {
         song = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h3").text("Drag Here");
-
+    }
 
     $(".OneNote").hide();
     console.log ("element hidden");
