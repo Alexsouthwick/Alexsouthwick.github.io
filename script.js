@@ -30,8 +30,12 @@ var Disney_selected = false;
 var Allegro_selected = false;
 var Disney_clicked = "notclicked";
 var Allegro_clicked = "notclicked";
+var NoteValue = 0
 
 $(document).ready(function() {
+
+    var dict = [];
+
     console.log("something should happen1")
 
     $(".draggable").draggable({
@@ -211,6 +215,7 @@ $(document).ready(function() {
             }
         }
 
+
         $(".measure").each(function( index, element){
             var thisNote = str.substring(index,index);
             if ($(this).is("#QuarterNote")){
@@ -230,13 +235,13 @@ $(document).ready(function() {
             }
             else if ($(this).is("#HalfNote")){
                 NoteValue = 2;
-            }
 
             dict.push({
                 key: thisNote,
                 value: NoteValue
-            })
+            });
             console.log(dict);
+            
         });
     };
 
@@ -244,7 +249,7 @@ $(document).ready(function() {
         song = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h3").text("Drag Here");
-    };
+
 
     $(".OneNote").hide();
     console.log ("element hidden");

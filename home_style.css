@@ -61,3 +61,25 @@ button{
     border-radius: 10%;
     margin-left:570px;
 }
+#button{
+    padding: 10px;
+    display:inline-block;
+    font-size: 20px;
+    background-color: white;
+    margin: 20px;
+    margin-left: 570px;
+    border: 2px solid #2574A9;
+}
+
+#button a{
+    text-decoration: none;
+    color: black;
+}
+
+#button:hover {
+    background-color: #1B2631;
+}
+
+#button a:hover {
+    color: white;
+}
