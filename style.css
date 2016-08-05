@@ -14,17 +14,17 @@ h4{
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
-    padding-top: 28px;
     font-size: 20px;
 }
 
 h3{
-    color: white;
+    color: #85C1E9;
     font-style: oblique;
     font-family: "Trebuchet MS", Helvetica, Serif;
     text-align: center;
     padding-top: 10px;
     font-size: 20px;
+    text-shadow: -1px 0 #2574A9, 0 1px #2574A9, 1px 0 #2574A9, 0 -1px #2574A9;
 }
 
 #Home{
@@ -54,29 +54,49 @@ h3{
 #SelectRhythm{
     text-align: center;
     vertical-align: center;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-left: 400px;
+    width:500px;
+    height: 250px;
+    background-color: #E5E8E8;
+    color:#1A5276;
 }
 
 
 .DisneyButton{
     width: 100px;
     height: 30px;
-    background-color: #22A7F0;
+    background-color: #1A5276;
     margin: auto;
     cursor: pointer;
+    color:white;
+    border: 2px solid #2574A9 ;
+    border-radius:10%;
 }
 
+.DisneyButton:hover{
+    background-color: #1B2631
+
+}
 .AllegroButton{
     width: 100px;
     height: 30px;
-    background-color: #22A7F0;
+    background-color: #1A5276;
     margin: auto;
     cursor: pointer;
+    color:white;
+    border: 2px solid #2574A9;
+    border-radius:10%;
+}
+.AllegroButton:hover{
+    background-color: #1B2631
 }
 
 .ButtonSelected{
     width: 100px;
     height: 30px;
-    background-color: #2574A9;
+    background-color: #1B2631;
     margin: auto;
     cursor: pointer;
 }
@@ -87,6 +107,8 @@ h3{
     background-color: blue;
     cursor: pointer;
     border-radius: 10%;
+    margin: 20px;
+    border: 2px solid #021a40;
 }
 
 .Sidebar{
@@ -99,23 +121,27 @@ h3{
     overflow-x:hidden;
     margin:20px;
     float: left;
+    background-color: #BFC9CA;
 }
 
 
 .NoteSelection{
     width: 30px;
     height: 20px;
-    background-color: #22A7F0;
+    background-color: #1A5276;
     display:inline-block;
     border: 2px solid #2574A9;
     cursor:pointer;
     text-align: center;
+    color:white;
 }
-
+.NoteSelection:hover{
+    background-color: #1B2631
+}
 .NoteSelectionSelected{
     width: 30px;
     height: 20px;
-    background-color: #2574A9;
+    background-color: #1B2631;
     display: inline-block;
     cursor: pointer;
     text-align: center;
@@ -144,7 +170,7 @@ button {
     overflow-x:scroll;
     margin:20px;
     float: right;
-    background-color: white;
+    background-color: #BFC9CA;
 }
 
 .DropBar{
@@ -172,8 +198,6 @@ button {
 .highlighted {   
     background-color:   #FFD700;
     position:static;
-   /* padding-top: 28px;*/
-    
 }
 
 .beat{
@@ -228,4 +252,15 @@ button {
     height: 20px;
     background-color: black;
     display: inline-block;
+}
+button {
+    background-color: #1A5276;
+    color:white;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    border: 2px solid #2574A9;
+}
+
+button:hover{
+    background-color: #1B2631;
 }
