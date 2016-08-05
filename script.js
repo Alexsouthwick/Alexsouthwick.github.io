@@ -210,10 +210,40 @@ $(document).ready(function() {
                 createOscillator(freq);
             }
         }
+
+        $(".measure").each(function( index, element){
+            var thisNote = str.substring(index,index);
+            if ($(this).is("#QuarterNote")){
+                NoteValue = 4;
+            }
+            else if ($(this).is("#EighthNote")){
+                NoteValue = 8;
+            }
+            else if ($(this).is("#SixteenthNote")){
+                NoteValue = 16;
+            }
+            else if ($(this).is("#DottedQuarter")){
+                NoteValue = 12;
+            }
+            else if ($(this).is("#WholeNote")){
+                NoteValue = 1;
+            }
+            else if ($(this).is("#HalfNote")){
+                NoteValue = 2;
+            }
+
+            dict.push({
+                key: thisNote,
+                value: NoteValue
+            })
+            console.log(dict);
+        });
     };
 
     document.getElementById('clear').onclick = function() {
         song = "";
+        $(".droppable").removeClass("highlighted");
+        $(".droppable h3").text("Drag Here");
     };
 
     $(".OneNote").hide();
