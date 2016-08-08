@@ -162,4 +162,6 @@ margin-top: -10px;
     margin-left: 250px;
     width:800px;
     background-color: white;
+    border-radius: 4%;
+    border:2px solid black;
 }
