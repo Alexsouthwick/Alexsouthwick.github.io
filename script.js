@@ -34,7 +34,6 @@ var NoteValue = 0
 var beatlist = []
 
 $(document).ready(function() {
-
     var dict = [];
 
     console.log("something should happen1")
@@ -60,6 +59,9 @@ $(document).ready(function() {
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
                 console.log(droppableid);
+                alert("You have just created a measure of a song! Keep dragging and dropping blocks with the same number of notes as the black squares above. Once you are done you can play your brand new song! If you want to clear your whole song, click the clear button.")
+                alert("Disclaimer: Due to problems with the API we used, the play song button can only be used 6 times. We are working on a fix for this.")
+                alert("Once you have read all of the intructions, click the box that says 'Prevent this page from creating additional dialogs'. Have fun creating music with Cadenza!")
                 if (droppableid == "block1"){
                     $("#block1 h4").text(draggableid);
                 }
@@ -175,6 +177,8 @@ $(document).ready(function() {
 
     $("#Disney").hide();
     $("#Allegro").hide();
+        alert("Instructions: To begin your song, click one of the rhythms below."
+        );
     
     $('.DisneyButton').click(function(){
         Disney_clicked = "clicked";
@@ -183,6 +187,7 @@ $(document).ready(function() {
             Disney_selected = true;
             Disney_clicked = "notclicked";
             $("#Disney").show();
+            alert("Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
 
         if (Disney_clicked == "clicked" && Disney_selected == true){
@@ -199,6 +204,7 @@ $(document).ready(function() {
             Allegro_selected = true;
             Allegro_clicked = "notclicked";
             $("#Allegro").show();
+                  alert(" Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
         if (Allegro_clicked == "clicked" && Allegro_selected == true){
             Allegro_selected = false;
@@ -404,17 +410,21 @@ $(document).ready(function() {
     $('#One').click(function(){
         var One_clicked = "clicked";
         if (One_clicked == "clicked" && One_selected == false){
+            first = true;
             $("#One").addClass("NoteSelectionSelected");
             One_selected = true;
             One_clicked = "notclicked";
             $(".OneNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order."); 
         }
         if (One_clicked == "clicked" && One_selected == true){
             One_selected = false;
+            first= false;
             One_clicked = "notclicked";
             $(".OneNote").hide();
             $("#One").removeClass("NoteSelectionSelected");
         }
+
     });
     $('#Two').click(function(){
         var Two_clicked = "clicked";
@@ -423,6 +433,7 @@ $(document).ready(function() {
             Two_selected = true;
             Two_clicked = "notclicked";
             $(".TwoNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Two_clicked == "clicked" && Two_selected == true){
             Two_selected = false;
@@ -438,6 +449,7 @@ $(document).ready(function() {
             Three_selected = true;
             Three_clicked = "notclicked";
             $(".ThreeNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Three_clicked == "clicked" && Three_selected == true){
             Three_selected = false;
@@ -453,6 +465,7 @@ $(document).ready(function() {
             Four_selected = true;
             Four_clicked = "notclicked";
             $(".FourNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Four_clicked == "clicked" && Four_selected == true){
             Four_selected = false;
@@ -468,6 +481,7 @@ $(document).ready(function() {
             Five_selected = true;
             Five_clicked = "notclicked";
             $(".FiveNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Five_clicked == "clicked" && Five_selected == true){
             Five_selected = false;
@@ -483,6 +497,7 @@ $(document).ready(function() {
             Six_selected = true;
             Six_clicked = "notclicked";
             $(".SixNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Six_clicked == "clicked" && Six_selected == true){
             Six_selected = false;
@@ -498,6 +513,7 @@ $(document).ready(function() {
             Seven_selected = true;
             Seven_clicked = "notclicked";
             $(".SevenNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Seven_clicked == "clicked" && Seven_selected == true){
             Seven_selected = false;

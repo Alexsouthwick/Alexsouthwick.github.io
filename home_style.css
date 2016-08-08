@@ -128,6 +128,8 @@ button{
 .journal_entry{
     margin:10px;
     background-color: white;
+    border-radius: 2%;
+    border:2px solid black;  
 }
 
 .JournalImage img{
