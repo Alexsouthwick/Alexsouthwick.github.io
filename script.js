@@ -120,52 +120,84 @@ $(document).ready(function() {
                  song += "b"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="CE"){
+                 else if (draggableid=="G"){
+                 song += "g"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="D"){
+                 song += "d"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="E"){
+                 song += "e"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A"){
+                 song += "a"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E"){
                  song += "ce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="AF"){
+                 else if (draggableid=="A F"){
                  song += "af"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="AFG"){
+                 else if (draggableid=="E G"){
+                 song += "eg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="F B"){
+                 song += "fb"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A F G"){
                  song += "afg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="CED"){
+                 else if (draggableid=="C E D"){
                  song += "ced"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="CEGC"){
+                 else if (draggableid=="C E G C"){
                  song += "cegc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="DEGC"){
+                 else if (draggableid=="D E G C"){
                  song += "degc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="CEGCE"){
+                 else if (draggableid=="C E G C E"){
                  song += "cegce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="DAGCA"){
+                 else if (draggableid=="D A G C A"){
                  song += "dagca"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="CEGCEG"){
+                 else if (draggableid=="F B A C E"){
+                 song += "fbace"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A D F G C"){
+                 song += "adfgc"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="C E G C E G"){
                  song += "cegceg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="FACEFC"){
+                 else if (draggableid=="F A C E F C"){
                  song += "facefc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="GECACEG"){
+                 else if (draggableid=="G E C A C E G"){
                  song += "gecaceg"; 
                  console.log(song);  
                  }
 
-                else if (draggableid=="ADGBCGE"){
+                else if (draggableid=="A D G B C G E"){
                  song += "adgbcge"; 
                  console.log(song);  
                  }
@@ -213,23 +245,23 @@ $(document).ready(function() {
         }
     });
 
-    $( "#C" ).mouseenter(function() {
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        var player = conductor.finish();
-        player.play();
-    });
+    // $( "#C" ).mouseenter(function() {
+    //     var conductor = new BandJS();
+    //     conductor.setTimeSignature(4,4);
+    //     var piano = conductor.createInstrument();
+    //     piano.note('quarter', 'C4');
+    //     var player = conductor.finish();
+    //     player.play();
+    // });
 
-    $( "#B" ).mouseenter(function() {
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'B4');
-        var player = conductor.finish();
-        player.play();
-    });
+    // $( "#B" ).mouseenter(function() {
+    //     var conductor = new BandJS();
+    //     conductor.setTimeSignature(4,4);
+    //     var piano = conductor.createInstrument();
+    //     piano.note('quarter', 'B4');
+    //     var player = conductor.finish();
+    //     player.play();
+    // });
 
     $("#CE").mouseenter(function(){
         var conductor = new BandJS();
@@ -386,6 +418,7 @@ $(document).ready(function() {
         var f = "F4";
 
         conductor.setTimeSignature(4,4);
+        conductor.setMasterVolume(400);
         var piano = conductor.createInstrument();
         for (i = 0; i< song.length; i++){
 
