@@ -117,52 +117,52 @@ $(document).ready(function() {
                  song += "b"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E"){
+                 else if (draggableid=="CE"){
                  song += "ce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="A F"){
+                 else if (draggableid=="AF"){
                  song += "af"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="A F G"){
+                 else if (draggableid=="AFG"){
                  song += "afg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E D"){
+                 else if (draggableid=="CED"){
                  song += "ced"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C"){
+                 else if (draggableid=="CEGC"){
                  song += "cegc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="D E G C"){
+                 else if (draggableid=="DEGC"){
                  song += "degc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C E"){
+                 else if (draggableid=="CEGCE"){
                  song += "cegce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="D A G C A"){
+                 else if (draggableid=="DAGCA"){
                  song += "dagca"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C E G"){
+                 else if (draggableid=="CEGCEG"){
                  song += "cegceg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="F A C E F C"){
+                 else if (draggableid=="FACEFC"){
                  song += "facefc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="G E C A C E G"){
+                 else if (draggableid=="GECACEG"){
                  song += "gecaceg"; 
                  console.log(song);  
                  }
 
-                else if (draggableid=="A D G B C G E"){
+                else if (draggableid=="ADGBCGE"){
                  song += "adgbcge"; 
                  console.log(song);  
                  }
@@ -229,25 +229,20 @@ $(document).ready(function() {
         oscillator.start(0);
         oscillator.stop(1);
     });
-    $("#C E").mouseenter(function(){
-        console.log("hovered");
-        var notesequence = "ce";
+    function sing(notesequence){
         var audio = new window.AudioContext(),
-            position = 0,
-            scale = {
-                g: 392,
-                c: 261.63,
-                f: 349.23,
-                d: 293.66,
-                e: 329.63,
-                a: 261.63,
-                b: 493.88
-            };
-            // song = "edcdeee-ddd-eee-edcdeee-cddedc---";
-
-        setInterval(play, 1000 / 4);
-
-        function createOscillator(freq) {
+        position = 0,
+        scale = {
+            g: 392,
+            c: 261.63,
+            f: 349.23,
+            d: 293.66,
+            e: 329.63,
+            a: 261.63,
+            b: 493.88
+        };
+        setInterval(play, 1000/4);
+        function createOscillator(freq){
             var osc = audio.createOscillator();
 
             osc.frequency.value = freq;
@@ -260,7 +255,6 @@ $(document).ready(function() {
                 osc.disconnect(audio.destination);
             }, 1000 / 4)
         }
-
         function play() {
             var note = notesequence.charAt(position),
                 freq = scale[note];
@@ -271,9 +265,51 @@ $(document).ready(function() {
             if(freq) {
                 createOscillator(freq);
             }
-            console.log(notesequence);
-            console.log("hovered");
         }
+    };
+    $("#CE").mouseenter(function(){
+        var notesequence = "ce";
+        sing(notesequence);
+    });
+    $("#AF").mouseenter(function(){
+        var notesequence = "af";
+        sing(notesequence);
+    });
+    $("#AFG").mouseenter(function(){
+        var notesequence = "afg";
+        sing(notesequence);
+    });
+    $("#CED").mouseenter(function(){
+        var notesequence = "ced";
+        sing(notesequence);
+    });
+    $("#CGEB").mouseenter(function(){
+        var notesequence = "cegb";
+        sing(notesequence);
+    });
+    $("#DEGC").mouseenter(function(){
+        var notesequence = "degc";
+        sing(notesequence);
+    });
+    $("#CEGCE").mouseenter(function(){
+        var notesequence = "cegce";
+        sing(notesequence);
+    });
+    $("#DAGCA").mouseenter(function(){
+        var notesequence = "dagca";
+        sing(notesequence);
+    });
+    $("#CEGCEG").mouseenter(function(){
+        var notesequence = "cegceg";
+        sing(notesequence);
+    });
+    $("#FACEFC").mouseenter(function(){
+        var notesequence = "facefc";
+        sing(notesequence);
+    });
+    $("#GECACEG").mouseenter(function(){
+        var notesequence = "gecaceg";
+        sing(notesequence);
     });
 
 
@@ -349,7 +385,7 @@ $(document).ready(function() {
             // console.log(dict);  
         });
      
-};
+    };
     document.getElementById('clear').onclick = function() {
         song = "";
         $(".droppable").removeClass("highlighted");
