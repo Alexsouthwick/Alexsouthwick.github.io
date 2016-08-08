@@ -207,6 +207,76 @@ $(document).ready(function() {
         }
     });
 
+    $( "#C" ).mouseenter(function() {
+        context = new AudioContext;
+        oscillator = context.createOscillator();
+        oscillator.type = 'square';
+        oscillator.frequency.value = 261.63;
+
+        oscillator.connect(context.destination);
+
+        oscillator.start(0);
+        oscillator.stop(1);
+    });
+    $( "#B" ).mouseenter(function() {
+        context = new AudioContext;
+        oscillator = context.createOscillator();
+        oscillator.type = 'square';
+        oscillator.frequency.value = 493.88;
+
+        oscillator.connect(context.destination);
+
+        oscillator.start(0);
+        oscillator.stop(1);
+    });
+    $("#C E").mouseenter(function(){
+        console.log("hovered");
+        var notesequence = "ce";
+        var audio = new window.AudioContext(),
+            position = 0,
+            scale = {
+                g: 392,
+                c: 261.63,
+                f: 349.23,
+                d: 293.66,
+                e: 329.63,
+                a: 261.63,
+                b: 493.88
+            };
+            // song = "edcdeee-ddd-eee-edcdeee-cddedc---";
+
+        setInterval(play, 1000 / 4);
+
+        function createOscillator(freq) {
+            var osc = audio.createOscillator();
+
+            osc.frequency.value = freq;
+            osc.type = "square";
+            osc.connect(audio.destination);
+            osc.start(0);
+
+            setTimeout(function() {
+                osc.stop(0);
+                osc.disconnect(audio.destination);
+            }, 1000 / 4)
+        }
+
+        function play() {
+            var note = notesequence.charAt(position),
+                freq = scale[note];
+            position += 1;
+            // if(position >= inputvalue.length) {
+            //     position = 0;
+            // }
+            if(freq) {
+                createOscillator(freq);
+            }
+            console.log(notesequence);
+            console.log("hovered");
+        }
+    });
+
+
     document.getElementById('PlayButton').onclick = function() {
         var audio = new window.AudioContext(),
             position = 0,
