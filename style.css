@@ -11,6 +11,10 @@ h1 {
     font-family: "Trebuchet MS", Helvetica, Serif;
     font-size: 50px;
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    margin-top: 0px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 h4{
@@ -41,36 +45,57 @@ h3{
     /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
 }
 
-#Home{
-    padding: 10px;
-    display:inline-block;
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+    overflow: hidden;
     font-size: 20px;
-    background-color: white;
-    margin: 20px;
-    margin-left: 1200px;
-    border: 2px solid #2574A9;
-    border-radius: 10%;
+    box-shadow:  0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#Home a{
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color:black;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 27px;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: black;
+    font-weight: bold;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
 }
 
-#Home:hover {
-    background-color: #1B2631;
+li a:hover {
+    color: #7E7E7E;
 }
 
-#Home a:hover {
-    color: white;
+.bottomline{
+    margin-top: 0;
+    padding-top: 0;
+    height: 2px;
+    width: 120%;
+    border-bottom: 1px solid black;
+    box-shadow: 1px;
 }
-
 #SelectRhythm{
     text-align: center;
     vertical-align: center;
     border: 2px solid black;
     border-radius: 10%;
-    margin-left: 400px;
+    margin: auto;
     width:500px;
     height: 250px;
     background-color: #E5E8E8;
@@ -160,7 +185,7 @@ h3{
     background-color: #081555;
 }
 .Sidebar{
-    width: 310px;
+    width: 330px;
     height: 800px;
     overflow: scroll;
     white-space: nowrap;
@@ -175,6 +200,18 @@ h3{
 
 .NoteSelection{
     width: 30px;
+    height: 20px;
+    background-color: #1A5276;
+    display:inline-block;
+    border: 2px solid #2574A9;
+    cursor:pointer;
+    text-align: center;
+    color:white;
+}
+
+
+.NoteSelection2{
+    width: 35px;
     height: 20px;
     background-color: #1A5276;
     display:inline-block;
@@ -209,7 +246,7 @@ button {
 }
 
 .Scroller{
-    width: 900px;
+    width: 70%;
     height: 180px;
     overflow: scroll;
     white-space: nowrap;
