@@ -1,4 +1,3 @@
-
 $(".draggable").draggable({
     helper: 'clone'
 });
@@ -26,15 +25,19 @@ var Four_selected = false;
 var Five_selected = false;
 var Six_selected = false;
 var Seven_selected = false;
+var BeatsButton_selected = false;
+var BeatsButton_clicked = "notclicked";
 var Disney_selected = false;
 var Allegro_selected = false;
+var Custom_selected = false;
 var Disney_clicked = "notclicked";
 var Allegro_clicked = "notclicked";
-var NoteValue = 0
-var beatlist = []
+var Custom_clicked = "notclicked";
+var NoteValue = 0;
+var position = 0;
+var custombeatstring = "";
 
 $(document).ready(function() {
-
     var dict = [];
 
     console.log("something should happen1")
@@ -46,20 +49,18 @@ $(document).ready(function() {
     $(".droppable").droppable({
          drop: function(event, ui) {
             $(this)
-            // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
+   
              .addClass("highlighted")
              highlight= true;
              console.log(highlight);
              console.log("something should be happening");
              if (highlight == true) {
-                // var width= $(".draggable").width();
-                // $("#blocks_list").append("<li> block </li>");
-                // console.log($("#blocks_list li").length);
-                // combined_width= ((width) * ($("#blocks_list li").length));
-                // console.log(combined_width);
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
                 console.log(droppableid);
+                alert("You have just created a measure of a song! Keep dragging and dropping blocks with the same number of notes as the black squares above. Once you are done you can play your brand new song! If you want to clear your whole song, click the clear button.")
+                alert("Disclaimer: Due to problems with the API we used, the play song button can only be used 6 times. We are working on a fix for this.")
+                alert("Once you have read all of the intructions, click the box that says 'Prevent this page from creating additional dialogs'. Have fun creating music with Cadenza!")
                 if (droppableid == "block1"){
                     $("#block1 h4").text(draggableid);
                 }
@@ -99,12 +100,12 @@ $(document).ready(function() {
 
 
 
-                if (draggableid == 'C G E B'){
+                if (draggableid == 'CGEB'){
                     song += "cgeb"; 
                     console.log('song: ', song);  
                 }
 
-                else if (draggableid=="F G B A"){
+                else if (draggableid=="FGBA"){
                     song += "fgba"; 
                     console.log(song);  
                 }
@@ -117,12 +118,36 @@ $(document).ready(function() {
                  song += "b"; 
                  console.log(song);  
                  }
+                 else if (draggableid=="G"){
+                 song += "g"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="D"){
+                 song += "d"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="E"){
+                 song += "e"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="A"){
+                 song += "a"; 
+                 console.log(song);  
+                 }
                  else if (draggableid=="CE"){
                  song += "ce"; 
                  console.log(song);  
                  }
                  else if (draggableid=="AF"){
                  song += "af"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="EG"){
+                 song += "eg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="FB"){
+                 song += "fb"; 
                  console.log(song);  
                  }
                  else if (draggableid=="AFG"){
@@ -149,6 +174,14 @@ $(document).ready(function() {
                  song += "dagca"; 
                  console.log(song);  
                  }
+                 else if (draggableid=="FBACE"){
+                 song += "fbace"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="ADFGC"){
+                 song += "adfgc"; 
+                 console.log(song);  
+                 }
                  else if (draggableid=="CEGCEG"){
                  song += "cegceg"; 
                  console.log(song);  
@@ -166,15 +199,55 @@ $(document).ready(function() {
                  song += "adgbcge"; 
                  console.log(song);  
                  }
-
                 else
                     {console.log("else happened")}
             }
             }
     });
+    $(".draggable2").draggable({
+        helper: 'clone'
+    });
+
+    $(".droppable2").droppable({
+         drop: function(event, ui) {
+            $(this)
+
+
+             .addClass("highlighted")
+             highlight= true;
+             console.log(highlight);
+             console.log("something should be happening");
+             if (highlight == true) {
+                var droppableid= $(this).attr("id");
+                var draggableid= ui.draggable.attr("id");
+            };
+            if (draggableid == "qqqq"){
+                custombeatstring += "qqqq";
+            };
+            if (draggableid == "w"){
+                custombeatstring += "w";
+            };
+            if (draggableid == "hh"){
+                custombeatstring += "hh";
+            }
+            if (draggableid == "heeq"){
+                custombeatstring += "heeq";
+            }
+            if (draggableid == "qeeeeq"){
+                custombeatstring += "qeeeqq";
+            }
+            if (draggableid == "hqq"){
+                custombeatstring += "hqq";
+            }
+        }
+    });
 
     $("#Disney").hide();
     $("#Allegro").hide();
+    $("#Custom").hide();
+
+        alert("Instructions: To begin your song, click one of the rhythms below."
+        );
     
     $('.DisneyButton').click(function(){
         Disney_clicked = "clicked";
@@ -183,11 +256,14 @@ $(document).ready(function() {
             Disney_selected = true;
             Disney_clicked = "notclicked";
             $("#Disney").show();
+            $("#BeatsButton").hide();
+            alert("Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
 
         if (Disney_clicked == "clicked" && Disney_selected == true){
             Disney_selected = false;
             $("#Disney").hide();
+            $("#BeatsButton").show();
             $(".DisneyButton").removeClass("ButtonSelected");
         }
     });
@@ -199,222 +275,278 @@ $(document).ready(function() {
             Allegro_selected = true;
             Allegro_clicked = "notclicked";
             $("#Allegro").show();
+            $("#BeatsButton").hide();
+                  alert(" Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
         if (Allegro_clicked == "clicked" && Allegro_selected == true){
             Allegro_selected = false;
             $("#Allegro").hide();
+            $("#BeatsButton").show();
             $(".AllegroButton").removeClass("ButtonSelected");
         }
     });
-
-    $( "#C" ).mouseenter(function() {
-        context = new AudioContext;
-        oscillator = context.createOscillator();
-        oscillator.type = 'square';
-        oscillator.frequency.value = 261.63;
-
-        oscillator.connect(context.destination);
-
-        oscillator.start(0);
-        oscillator.stop(1);
-    });
-    $( "#B" ).mouseenter(function() {
-        context = new AudioContext;
-        oscillator = context.createOscillator();
-        oscillator.type = 'square';
-        oscillator.frequency.value = 493.88;
-
-        oscillator.connect(context.destination);
-
-        oscillator.start(0);
-        oscillator.stop(1);
-    });
-    function sing(notesequence){
-        var audio = new window.AudioContext(),
-        position = 0,
-        scale = {
-            g: 392,
-            c: 261.63,
-            f: 349.23,
-            d: 293.66,
-            e: 329.63,
-            a: 261.63,
-            b: 493.88
-        };
-        setInterval(play, 1000/4);
-        function createOscillator(freq){
-            var osc = audio.createOscillator();
-
-            osc.frequency.value = freq;
-            osc.type = "square";
-            osc.connect(audio.destination);
-            osc.start(0);
-
-            setTimeout(function() {
-                osc.stop(0);
-                osc.disconnect(audio.destination);
-            }, 1000 / 4)
+    $('.CustomButton').click(function(){
+        var Custom_clicked = "clicked";
+        if (Custom_clicked == "clicked" && Custom_selected == false && Allegro_selected == false && Disney_selected == false){
+            $(".CustomButton").addClass("CustomSelected");
+            Custom_selected = true;
+            Custom_clicked = "notclicked";
+            $("#Custom").show();
         }
-        function play() {
-            var note = notesequence.charAt(position),
-                freq = scale[note];
-            position += 1;
-            // if(position >= inputvalue.length) {
-            //     position = 0;
-            // }
-            if(freq) {
-                createOscillator(freq);
-            }
+        if (Custom_clicked == "clicked" && Custom_selected == true){
+            Custom_selected = false;
+            $("#Custom").hide();
+            $(".CustomButton").removeClass("CustomSelected");
         }
-    };
+    })
+
+
     $("#CE").mouseenter(function(){
-        var notesequence = "ce";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#AF").mouseenter(function(){
-        var notesequence = "af";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'A4');
+        piano.note('quarter', 'F4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#AFG").mouseenter(function(){
-        var notesequence = "afg";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'A4');
+        piano.note('quarter', 'F4');
+        piano.note('quarter', 'G4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#CED").mouseenter(function(){
-        var notesequence = "ced";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'D4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#CGEB").mouseenter(function(){
-        var notesequence = "cegb";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'B4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#DEGC").mouseenter(function(){
-        var notesequence = "degc";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'D4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'C4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#CEGCE").mouseenter(function(){
-        var notesequence = "cegce";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#DAGCA").mouseenter(function(){
-        var notesequence = "dagca";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'D4');
+        piano.note('quarter', 'A4');
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'A4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#CEGCEG").mouseenter(function(){
-        var notesequence = "cegceg";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'G4');
+        var player = conductor.finish();
+        player.play();
     });
     $("#FACEFC").mouseenter(function(){
-        var notesequence = "facefc";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'F4');
+        piano.note('quarter', 'A4');
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'F4');
+        piano.note('quarter', 'C4');
+        var player = conductor.finish();
+        player.play();
     });
+
     $("#GECACEG").mouseenter(function(){
-        var notesequence = "gecaceg";
-        sing(notesequence);
+        var conductor = new BandJS();
+        conductor.setTimeSignature(4,4);
+        var piano = conductor.createInstrument();
+        piano.note('quarter', 'G4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'A4');
+        piano.note('quarter', 'C4');
+        piano.note('quarter', 'E4');
+        piano.note('quarter', 'G4');
+        var player = conductor.finish();
+        player.play();
     });
+
 
 
     document.getElementById('PlayButton').onclick = function() {
-        var audio = new window.AudioContext(),
-            position = 0,
-            scale = {
-                g: 392,
-                c: 261.63,
-                f: 349.23,
-                d: 293.66,
-                e: 329.63,
-                a: 261.63,
-                b: 493.88
-            };
-            // song = "edcdeee-ddd-eee-edcdeee-cddedc---";
+        if (Disney_selected == true){
+            beatstring = "qeqeqwqeqeqhhqeqeqqqqqqqqeedeqqqeqeqwqeqeqhh";
+        };
+        if (Allegro_selected == true){
+            beatstring = "qqqqeeeeqqqqqqeeeehqqqqqqqqqqqqqqqhqqqqeeeeqqqqqqeeeeh";
+        };
+        if (Custom_selected == true){
+            beatstring = custombeatstring;
+            console.log(beatstring);
+        };
+        var conductor = new BandJS();
+        var q = "quarter";
+        var e ="eighth";
 
-        setInterval(play, 1000 / 4);
+        var g = "G4";
+        var c = "C4";
+        var e = "E4";
+        var a = "A4";
+        var b = "B4";
+        var d = "D4";
+        var f = "F4";
 
-        function createOscillator(freq) {
-            var osc = audio.createOscillator();
+        conductor.setTimeSignature(4,4);
+        conductor.setMasterVolume(400);
+        var piano = conductor.createInstrument();
+        for (i = 0; i< song.length; i++){
 
-            osc.frequency.value = freq;
-            osc.type = "square";
-            osc.connect(audio.destination);
-            osc.start(0);
-
-            setTimeout(function() {
-                osc.stop(0);
-                osc.disconnect(audio.destination);
-            }, 1000 / 4)
+            console.log(beatstring);
+            var note = song.charAt(i);
+            if (note == "c"){
+                note = "C4";
+            }
+            if (note == "g"){
+                note = "G4";
+            }
+            if (note == "e"){
+                note = "E4";
+            }
+            if (note == "a"){
+                note = "A4";
+            }
+            if (note == "b"){
+                note = "B4";
+            }
+            if (note == "d"){
+                note = "D4";
+            }
+            if (note == "f"){
+                note = "F4";
+            }
+            var notelength = beatstring.charAt(i);
+            if (notelength == "q"){
+                notelength = "quarter";
+            }
+            if (notelength == "e"){
+                notelength = "eighth";
+            }
+            if (notelength == "h"){
+                notelength = "half";
+            }
+            if (notelength == "w"){
+                notelength = "whole";
+            }
+            if (notelength == "s"){
+                notelength = "sixteenth";
+            }
+            if (notelength == "d"){
+                notelength = "dottedQuarter";
+            }
+            piano.note(notelength, note);
         }
-
-        function play() {
-            var note = song.charAt(position),
-                freq = scale[note];
-            position += 1;
-            // if(position >= inputvalue.length) {
-            //     position = 0;
-            // }
-            if(freq) {
-                createOscillator(freq);
-            }
-        }
-
-
-        $(".measure").each(function( index, element){
-            var thisNote = song.substring(index,index);
-            if ($(this).is("#QuarterNote")){
-                NoteValue = 4;
-                beatlist.append("QuarterNote")
-            }
-            else if ($(this).is("#EighthNote")){
-                NoteValue = 8;
-            }
-            else if ($(this).is("#SixteenthNote")){
-                NoteValue = 16;
-            }
-            else if ($(this).is("#DottedQuarter")){
-                NoteValue = 12;
-            }
-            else if ($(this).is("#WholeNote")){
-                NoteValue = 1;
-            }
-            else if ($(this).is("#HalfNote")){
-                NoteValue = 2;
-            }
-
-            dict.push({
-                key: thisNote,
-                value: NoteValue
-            });
-            // console.log(dict);  
-        });
-     
-    };
+        var player = conductor.finish();
+        player.play();
+    }
     document.getElementById('clear').onclick = function() {
         song = "";
+        beatstring = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h4").text("Drag Here");
+        $(".droppable2").removeClass("highlighted");
+        $(".droppable h4").text("Drag Beats Here");
     }
     
     $(".OneNote").hide();
-    console.log ("element hidden");
     $(".TwoNote").hide();
     $(".ThreeNote").hide();
     $(".FourNote").hide();
     $(".FiveNote").hide();
     $(".SixNote").hide();
     $(".SevenNote").hide();
+    $(".Beats").hide();
 
     $('#One').click(function(){
         var One_clicked = "clicked";
         if (One_clicked == "clicked" && One_selected == false){
+            first = true;
             $("#One").addClass("NoteSelectionSelected");
             One_selected = true;
             One_clicked = "notclicked";
             $(".OneNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order."); 
         }
         if (One_clicked == "clicked" && One_selected == true){
             One_selected = false;
+            first= false;
             One_clicked = "notclicked";
             $(".OneNote").hide();
             $("#One").removeClass("NoteSelectionSelected");
         }
+
     });
     $('#Two').click(function(){
         var Two_clicked = "clicked";
@@ -423,6 +555,7 @@ $(document).ready(function() {
             Two_selected = true;
             Two_clicked = "notclicked";
             $(".TwoNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Two_clicked == "clicked" && Two_selected == true){
             Two_selected = false;
@@ -438,6 +571,7 @@ $(document).ready(function() {
             Three_selected = true;
             Three_clicked = "notclicked";
             $(".ThreeNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Three_clicked == "clicked" && Three_selected == true){
             Three_selected = false;
@@ -453,6 +587,7 @@ $(document).ready(function() {
             Four_selected = true;
             Four_clicked = "notclicked";
             $(".FourNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Four_clicked == "clicked" && Four_selected == true){
             Four_selected = false;
@@ -468,6 +603,7 @@ $(document).ready(function() {
             Five_selected = true;
             Five_clicked = "notclicked";
             $(".FiveNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Five_clicked == "clicked" && Five_selected == true){
             Five_selected = false;
@@ -483,6 +619,7 @@ $(document).ready(function() {
             Six_selected = true;
             Six_clicked = "notclicked";
             $(".SixNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Six_clicked == "clicked" && Six_selected == true){
             Six_selected = false;
@@ -498,6 +635,7 @@ $(document).ready(function() {
             Seven_selected = true;
             Seven_clicked = "notclicked";
             $(".SevenNote").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Seven_clicked == "clicked" && Seven_selected == true){
             Seven_selected = false;
@@ -506,4 +644,21 @@ $(document).ready(function() {
             $("#Seven").removeClass("NoteSelectionSelected");
         }
     });
+    $('#BeatsButton').click(function(){
+        var BeatsButton_clicked = "clicked";
+        if (BeatsButton_clicked == "clicked" && BeatsButton_selected == false){
+            $("#BeatsButton").addClass("NoteSelectionSelected");
+            BeatsButton_selected = true;
+            BeatsButton_clicked = "notclicked";
+            $(".Beats").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+        }
+        if (BeatsButton_clicked == "clicked" && BeatsButton_selected == true){
+            BeatsButton_selected = false;
+            BeatsButton_clicked = "notclicked";
+            $(".Beats").hide();
+            $("#BeatsButton").removeClass("NoteSelectionSelected");
+        }
+    });
+   
 });

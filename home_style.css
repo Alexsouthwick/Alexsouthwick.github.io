@@ -31,6 +31,10 @@ body {
     background-color: #85C1E9;
 }
 
+body {
+    background-image: url("background3.png");
+}
+
 h1{
     color: black;
     font-style: oblique;
@@ -72,11 +76,14 @@ h2{
 .paragraph{
     width:450px;
     margin-left: 445px;
+    background-color: red;
+    color:red;
 }
 
 p{
     text-align: center;
 }
+
 #entry{
     margin-top: -30px;
     padding: 20px;
@@ -128,6 +135,8 @@ button{
 .journal_entry{
     margin:10px;
     background-color: white;
+    border-radius: 2%;
+    border:2px solid black;  
 }
 
 .JournalImage img{
@@ -142,6 +151,10 @@ margin-top: -10px;
     width:auto;
     height:300px;
     margin-left:-150px;
+}
+#img4 img{
+    width: 900px;
+    margin-left: -100px;
 }
 
 .photo img{

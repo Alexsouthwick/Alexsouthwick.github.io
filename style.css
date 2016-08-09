@@ -1,5 +1,8 @@
-body {
+/*body {
     background-color: #85C1E9;
+}*/
+body {
+    background-image: url("background1.png");
 }
 
 h1 {
