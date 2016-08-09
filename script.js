@@ -607,7 +607,8 @@ $(document).ready(function() {
         $(".droppable").removeClass("highlighted");
         $(".droppable h4").text("Drag Here");
         $(".droppable2").removeClass("highlighted");
-        $(".droppable h4").text("Drag Beats Here");
+        $(".droppable2").removeClass("beatsDragged");
+        $(".droppable2 h5").text("Drag Beats Here");
     }
     
     $(".OneNote").hide();
