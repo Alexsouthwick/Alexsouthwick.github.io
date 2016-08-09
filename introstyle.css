@@ -2,7 +2,52 @@ body{
     background-image: url("http://il3.picdn.net/shutterstock/videos/13000349/thumb/10.jpg");
 }
 
-.navigation{
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+    overflow: hidden;
+    font-size: 20px;
+    box-shadow:  0 4px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color:black;
+    font-style: oblique;
+    font-family: "Trebuchet MS", Helvetica, Serif;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 27px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+}
+
+li a:hover {
+    color: #A020F0;
+}
+
+.bottomline{
+    margin-top: 0;
+    padding-top: 0;
+    height: 2px;
+    width: 120%;
+    border-bottom: 1px solid black;
+    box-shadow: 1px;
+}
+/*.navigation{
     background-color: #1A5276;
     height: 90px;
     border: 3px solid #2574A9;
@@ -30,7 +75,7 @@ body{
 .link a:hover {
     color: white;
 }
-
+*/
 body {
     background-color: #85C1E9;
 }
