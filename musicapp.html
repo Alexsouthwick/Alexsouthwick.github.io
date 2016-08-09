@@ -29,9 +29,12 @@
     <div id = "SelectRhythm">
         <h3> Select Your Beat </h3>
         <p> (If you wish to change your selection, unselect your previous pick to choose another.)
-        <p class = "DisneyButton"> Disney </p>
+        <div class = 'preset'>
+            <p class = "DisneyButton"> Disney </p>
+            <p class = "AllegroButton"> Allegro </p>
+        </div>
         <p> or </p>
-        <p class = "AllegroButton"> Allegro </p>
+        <p class = "CustomButton"> Create a Custom Beat </p>
     </div>
 
     <div class = "Sidebar">
@@ -42,8 +45,47 @@
             <p id = "Four" class = "NoteSelection"> 4 </p>
             <p id = "Five" class = "NoteSelection"> 5 </p>
             <p id = "Six" class = "NoteSelection"> 6 </p>
-            <p id = "Seven" class = "NoteSelection"> 7 <p>
-
+            <p id = "Seven" class = "NoteSelection"> 7 </p>
+            <p id = "BeatsButton" class = "NoteSelection"> Beats </p>
+        </div>
+        <div id = "block_list" class = "Beats">
+            <div class = "draggable2" id = "-- -- -- --">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "--------">
+                <div class = "WholeNote"></div>
+            </div>
+            <div class = "draggable2" id = "---- ----">
+                <div class = "HalfNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
+            <div class = "draggable2" id = "-- - - - - --">
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "---- - - --">
+                <div class = "HalfNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "---- -- --">
+                <div class = "HalfNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "-- -- ----">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
         </div>
         <div id = "block_list" class = "OneNote">
             <div class = "draggable" id= "C">
@@ -114,6 +156,7 @@
             <div class="draggable" id= "A D F G C">
                 <h4> A D F G C </h4>
             </div>
+
     </div>
     <div id= "block_list" class="SixNote">
         <div class="draggable" id= "C E G C E G">
@@ -130,10 +173,42 @@
     <div class="draggable" id= "A D G B C G E">
         <h4> A D G B C G E</h4>
     </div>
+
+        </div>
+        <div id= "block_list" class="SixNote">
+            <div class="draggable" id= "C E G C E G">
+            <h4> C E G C E G </h4>
+        </div>
+        <div class="draggable" id= "F A C E F C">
+            <h4> F A C E F C</h4> 
+        </div>
+        </div> 
+        <div id= "block_list" class="SevenNote">
+            <div class="draggable" id= "G E C A C E G">
+            <h4> G E C A C E G </h4>
+        </div>
+        <div class="draggable" id= "A D G B C G E">
+            <h4> A D G B C G E</h4>
+        </div>
+
     </div>
 </div>
 </div>
     <div class = "Scroller">
+        <div class = "BeatDropBar" id = "Custom">
+            <div class="droppable2" id="beat1"> <h5> Drag beats here</h5> </div>
+            <div class ="droppable2" id="beat2"><h5> Drag beats here </h5></div>
+            <div class = "droppable2" id="beat3"><h5> Drag beats here</h5></div>
+            <div class="droppable2" id="beat4"><h5> Drag beats here</h5> </div>
+            <div class = "droppable2" id="beat5"><h5>Drag beats here </h5></div>
+            <div class = "droppable2" id="beat6"><h5> Drag beats here</h5></div>
+            <div class="droppable2"  id="beat7"><h5> Drag beats here</h5></div>
+            <div class = "droppable2" id="beat8"><h5>Drag beats here </h5></div>
+            <div class = "droppable2" id="beat9"><h5> Drag beats here</h5></div>
+            <div class="droppable2" id="beat10"><h5> Drag beats here</h5></div>
+            <div class ="droppable2" id="beat11"><h5>Drag beats here </h5></div>
+            <div class = "droppable2" id="beat12"><h5> Drag beats here</h5></div>
+        </div>
         <div class = "beat" id = "Disney">
             <div class = "measure">
                 <div class = "QuarterNote"></div>
@@ -284,6 +359,7 @@
                 <div class = "HalfNote"></div>
             </div>
         </div>
+
         <div class = "DropBar">
             <div class="droppable" id= "block1"> <h4> Drag here</h4></div>
             <div class = "droppable" id= "block2"><h4> Drag here </h4></div>
