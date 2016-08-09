@@ -2,7 +2,7 @@
 Team Members: Alex Southwick, Shruti Sriram, Chloe Tanlimco
 
 ##Get Started:
-1. Go to [(alexsouthwick.github.io/index.html)].
+1. Go to alexsouthwick.github.io/index.html.
 2. Click on Start Your Song! to navigate to the app.
 3. Follow the instructions in the alerts to create your song. 
 
