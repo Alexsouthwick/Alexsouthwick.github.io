@@ -362,7 +362,7 @@ $(document).ready(function() {
             Custom_clicked = "notclicked";
             $("#Custom").show();
 
-            alert("To begin creating your own rhythm, click the 'Beat' button in the sidebar.")
+            alert("To begin creating your own rhythm, click the 'Beats' button in the sidebar.")
         }
         if (Custom_clicked == "clicked" && Custom_selected == true){
             Custom_selected = false;

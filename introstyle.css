@@ -39,6 +39,13 @@ li a:hover {
     color: #A020F0;
 }
 
+.logo{
+    width:auto;
+    height:60px;
+    padding-left: 755px;
+
+}
+
 .bottomline{
     margin-top: 0;
     padding-top: 0;
