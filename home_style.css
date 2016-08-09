@@ -31,6 +31,10 @@ body {
     background-color: #85C1E9;
 }
 
+body {
+    background-image: url("http://i68.tinypic.com/zkmlg6.jpg");
+}
+
 h1{
     color: black;
     font-style: oblique;

@@ -1,5 +1,8 @@
-body {
+/*body {
     background-color: #85C1E9;
+}*/
+body {
+    background-image: url("background1.png");
 }
 
 h1 {
@@ -25,6 +28,7 @@ h5{
     font-family: "Trebuchet MS", Helvetica, Serif;
     font-size: 20px;
 }
+
 
 h3{
     /*color: #85C1E9;*/
@@ -335,4 +339,10 @@ button {
 
 button:hover{
     background-color: #1B2631;
+}
+
+.beatsDragged{
+background-color: #E05206;
+font-color:blue;
+font-size: 100px;
 }
