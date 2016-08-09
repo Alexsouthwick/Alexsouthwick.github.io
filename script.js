@@ -184,7 +184,8 @@ $(document).ready(function() {
                  else if (draggableid=="A D F G C"){
                  song += "adfgc"; 
                  console.log(song);  
-
+                 }
+                 else if (draggableid == "C E G C E G"){
                  song += "cegceg"; 
                  console.log(song);  
                  }
@@ -243,8 +244,8 @@ $(document).ready(function() {
             else if (draggableid == "---- - - --"){
                 custombeatstring += "heeq";
             }
-            else if (draggableid == "-- - - - -- --"){
-                custombeatstring += "qeeeqq";
+            else if (draggableid == "-- - - - - --"){
+                custombeatstring += "qeeeeq";
             }
             else if (draggableid == "---- -- --"){
                 custombeatstring += "hqq";
