@@ -26,13 +26,17 @@ var Four_selected = false;
 var Five_selected = false;
 var Six_selected = false;
 var Seven_selected = false;
+var BeatsButton_selected = false;
+var BeatsButton_clicked = "notclicked";
 var Disney_selected = false;
 var Allegro_selected = false;
+var Custom_selected = false;
 var Disney_clicked = "notclicked";
 var Allegro_clicked = "notclicked";
+var Custom_clicked = "notclicked";
 var NoteValue = 0;
-var beatlist = [["blah", 0]];
 var position = 0;
+var custombeatstring = "";
 
 $(document).ready(function() {
     var dict = [];
@@ -136,68 +140,68 @@ $(document).ready(function() {
                  song += "a"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E"){
+                 else if (draggableid=="CE"){
                  song += "ce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="A F"){
+                 else if (draggableid=="AF"){
                  song += "af"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="E G"){
+                 else if (draggableid=="EG"){
                  song += "eg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="F B"){
+                 else if (draggableid=="FB"){
                  song += "fb"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="A F G"){
+                 else if (draggableid=="AFG"){
                  song += "afg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E D"){
+                 else if (draggableid=="CED"){
                  song += "ced"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C"){
+                 else if (draggableid=="CEGC"){
                  song += "cegc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="D E G C"){
+                 else if (draggableid=="DEGC"){
                  song += "degc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C E"){
+                 else if (draggableid=="CEGCE"){
                  song += "cegce"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="D A G C A"){
+                 else if (draggableid=="DAGCA"){
                  song += "dagca"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="F B A C E"){
+                 else if (draggableid=="FBACE"){
                  song += "fbace"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="A D F G C"){
+                 else if (draggableid=="ADFGC"){
                  song += "adfgc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="C E G C E G"){
+                 else if (draggableid=="CEGCEG"){
                  song += "cegceg"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="F A C E F C"){
+                 else if (draggableid=="FACEFC"){
                  song += "facefc"; 
                  console.log(song);  
                  }
-                 else if (draggableid=="G E C A C E G"){
+                 else if (draggableid=="GECACEG"){
                  song += "gecaceg"; 
                  console.log(song);  
                  }
 
-                else if (draggableid=="A D G B C G E"){
+                else if (draggableid=="ADGBCGE"){
                  song += "adgbcge"; 
                  console.log(song);  
                  }
@@ -206,9 +210,52 @@ $(document).ready(function() {
             }
             }
     });
+    $(".draggable2").draggable({
+        helper: 'clone'
+    });
+
+    $(".droppable2").droppable({
+         drop: function(event, ui) {
+            $(this)
+            // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
+             .addClass("highlighted")
+             highlight= true;
+             console.log(highlight);
+             console.log("something should be happening");
+             if (highlight == true) {
+                // var width= $(".draggable").width();
+                // $("#blocks_list").append("<li> block </li>");
+                // console.log($("#blocks_list li").length);
+                // combined_width= ((width) * ($("#blocks_list li").length));
+                // console.log(combined_width);
+                var droppableid= $(this).attr("id");
+                var draggableid= ui.draggable.attr("id");
+            };
+            if (draggableid == "qqqq"){
+                custombeatstring += "qqqq";
+            };
+            if (draggableid == "w"){
+                custombeatstring += "w";
+            };
+            if (draggableid == "hh"){
+                custombeatstring += "hh";
+            }
+            if (draggableid == "heeq"){
+                custombeatstring += "heeq";
+            }
+            if (draggableid == "qeeeeq"){
+                custombeatstring += "qeeeqq";
+            }
+            if (draggableid == "hqq"){
+                custombeatstring += "hqq";
+            }
+        }
+    });
 
     $("#Disney").hide();
     $("#Allegro").hide();
+    $("#Custom").hide();
+
         alert("Instructions: To begin your song, click one of the rhythms below."
         );
     
@@ -219,12 +266,14 @@ $(document).ready(function() {
             Disney_selected = true;
             Disney_clicked = "notclicked";
             $("#Disney").show();
+            $("#BeatsButton").hide();
             alert("Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
 
         if (Disney_clicked == "clicked" && Disney_selected == true){
             Disney_selected = false;
             $("#Disney").hide();
+            $("#BeatsButton").show();
             $(".DisneyButton").removeClass("ButtonSelected");
         }
     });
@@ -236,14 +285,32 @@ $(document).ready(function() {
             Allegro_selected = true;
             Allegro_clicked = "notclicked";
             $("#Allegro").show();
+            $("#BeatsButton").hide();
                   alert(" Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
         if (Allegro_clicked == "clicked" && Allegro_selected == true){
             Allegro_selected = false;
             $("#Allegro").hide();
+            $("#BeatsButton").show();
             $(".AllegroButton").removeClass("ButtonSelected");
         }
     });
+    $('.CustomButton').click(function(){
+        var Custom_clicked = "clicked";
+        if (Custom_clicked == "clicked" && Custom_selected == false && Allegro_selected == false && Disney_selected == false){
+            $(".CustomButton").addClass("CustomSelected");
+            Custom_selected = true;
+            Custom_clicked = "notclicked";
+            $("#Custom").show();
+        }
+        if (Custom_clicked == "clicked" && Custom_selected == true){
+            Custom_selected = false;
+            $("#Custom").hide();
+            $(".CustomButton").removeClass("CustomSelected");
+        }
+    })
+
+
 
     // $( "#C" ).mouseenter(function() {
     //     var conductor = new BandJS();
@@ -401,10 +468,14 @@ $(document).ready(function() {
     document.getElementById('PlayButton').onclick = function() {
         if (Disney_selected == true){
             beatstring = "qeqeqwqeqeqhhqeqeqqqqqqqqeedeqqqeqeqwqeqeqhh";
-        }
+        };
         if (Allegro_selected == true){
-        beatstring = "qqqqeeeeqqqqqqeeeehqqqqqqqqqqqqqqqhqqqqeeeeqqqqqqeeeeh";
-        }
+            beatstring = "qqqqeeeeqqqqqqeeeehqqqqqqqqqqqqqqqhqqqqeeeeqqqqqqeeeeh";
+        };
+        if (Custom_selected == true){
+            beatstring = custombeatstring;
+            console.log(beatstring);
+        };
         var conductor = new BandJS();
         var q = "quarter";
         var e ="eighth";
@@ -471,8 +542,11 @@ $(document).ready(function() {
     }
     document.getElementById('clear').onclick = function() {
         song = "";
+        beatstring = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h4").text("Drag Here");
+        $(".droppable2").removeClass("highlighted");
+        $(".droppable h4").text("Drag Beats Here");
     }
     
     $(".OneNote").hide();
@@ -482,6 +556,7 @@ $(document).ready(function() {
     $(".FiveNote").hide();
     $(".SixNote").hide();
     $(".SevenNote").hide();
+    $(".Beats").hide();
 
     $('#One').click(function(){
         var One_clicked = "clicked";
@@ -598,4 +673,21 @@ $(document).ready(function() {
             $("#Seven").removeClass("NoteSelectionSelected");
         }
     });
+    $('#BeatsButton').click(function(){
+        var BeatsButton_clicked = "clicked";
+        if (BeatsButton_clicked == "clicked" && BeatsButton_selected == false){
+            $("#BeatsButton").addClass("NoteSelectionSelected");
+            BeatsButton_selected = true;
+            BeatsButton_clicked = "notclicked";
+            $(".Beats").show();
+            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+        }
+        if (BeatsButton_clicked == "clicked" && BeatsButton_selected == true){
+            BeatsButton_selected = false;
+            BeatsButton_clicked = "notclicked";
+            $(".Beats").hide();
+            $("#BeatsButton").removeClass("NoteSelectionSelected");
+        }
+    });
+   
 });

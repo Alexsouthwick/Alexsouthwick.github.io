@@ -29,9 +29,12 @@
     <div id = "SelectRhythm">
         <h3> Select Your Beat </h3>
         <p> (If you wish to change your selection, unselect your previous pick to choose another.)
-        <p class = "DisneyButton"> Disney </p>
+        <div class = 'preset'>
+            <p class = "DisneyButton"> Disney </p>
+            <p class = "AllegroButton"> Allegro </p>
+        </div>
         <p> or </p>
-        <p class = "AllegroButton"> Allegro </p>
+        <p class = "CustomButton"> Create a Custom Beat </p>
     </div>
 
     <div class = "Sidebar">
@@ -42,8 +45,47 @@
             <p id = "Four" class = "NoteSelection"> 4 </p>
             <p id = "Five" class = "NoteSelection"> 5 </p>
             <p id = "Six" class = "NoteSelection"> 6 </p>
-            <p id = "Seven" class = "NoteSelection"> 7 <p>
-
+            <p id = "Seven" class = "NoteSelection"> 7 </p>
+            <p id = "BeatsButton" class = "NoteSelection"> Beats </p>
+        </div>
+        <div id = "block_list" class = "Beats">
+            <div class = "draggable2" id = "qqqq">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "w">
+                <div class = "WholeNote"></div>
+            </div>
+            <div class = "draggable2" id = "hh">
+                <div class = "HalfNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
+            <div class = "draggable2" id = "qeeeeq">
+                <div class = "QuarterNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "heeq">
+                <div class = "HalfNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "EighthNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "hqq">
+                <div class = "HalfNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+            </div>
+            <div class = "draggable2" id = "qqh">
+                <div class = "QuarterNote"></div>
+                <div class = "QuarterNote"></div>
+                <div class = "HalfNote"></div>
+            </div>
         </div>
         <div id = "block_list" class = "OneNote">
             <div class = "draggable" id= "C">
@@ -66,74 +108,88 @@
             </div>
         </div>
         <div id = "block_list" class = "TwoNote">
-            <div class = "draggable" id = "C E">
+            <div class = "draggable" id = "CE">
                 <h4> C E </h4>
             </div>
-            <div class = "draggable" id= "A F">
+            <div class = "draggable" id= "AF">
                 <h4> A F </h4>
             </div>
-            <div class = "draggable" id= "E G">
+            <div class = "draggable" id= "EG">
                 <h4> E G </h4>
             </div>
-            <div class = "draggable" id= "F B">
+            <div class = "draggable" id= "FB">
                 <h4> F B </h4>
             </div>
         </div>
         <div id = "block_list" class = "ThreeNote">
-            <div class = "draggable" id="A F G">
+            <div class = "draggable" id="AFG">
                 <h4> A F G </h4>
             </div>
-            <div class = "draggable" id="C E D">
+            <div class = "draggable" id="CED">
                 <h4> C E D </h4>
             </div>
         </div>
         <div id= "block_list" class = "FourNote">
-            <div class="draggable" id = "C G E B">
+            <div class="draggable" id = "CGEB">
                 <h4> C G E B </h4>
             </div>
-            <div class="draggable" id = "F G B A">
+            <div class="draggable" id = "FGBA">
                 <h4> F G B A </h4>
             </div>
-            <div class="draggable" id= "C E G C">
+            <div class="draggable" id= "CEGC">
                 <h4> C E G C </h4>
             </div>
-            <div class="draggable" id="D E G C">
+            <div class="draggable" id="DEGC">
                 <h4> D E G C </h4>
             </div>
         </div>
         <div id= "block_list" class= "FiveNote">
-            <div class="draggable" id= "C E G C E">
+            <div class="draggable" id= "CEGCE">
                 <h4> C E G C E </h4>
             </div>
-            <div class="draggable" id= "D A G C A">
+            <div class="draggable" id= "DAGCA">
                 <h4> D A G C A </h4>
             </div>
-            <div class="draggable" id= "F B A C E">
+            <div class="draggable" id= "FBACE">
                 <h4> F B A C E </h4>
             </div>
-            <div class="draggable" id= "A D F G C">
+            <div class="draggable" id= "ADFGC">
                 <h4> A D F G C </h4>
             </div>
-    </div>
-    <div id= "block_list" class="SixNote">
-        <div class="draggable" id= "C E G C E G">
-        <h4> C E G C E G </h4>
-    </div>
-    <div class="draggable" id= "F A C E F C">
-        <h4> F A C E F C</h4> 
-    </div>
-    </div> 
-    <div id= "block_list" class="SevenNote">
-        <div class="draggable" id= "G E C A C E G">
-        <h4> G E C A C E G </h4>
-    </div>
-    <div class="draggable" id= "A D G B C G E">
-        <h4> A D G B C G E</h4>
-    </div>
+        </div>
+        <div id= "block_list" class="SixNote">
+            <div class="draggable" id= "CEGCEG">
+            <h4> C E G C E G </h4>
+        </div>
+        <div class="draggable" id= "FACEFC">
+            <h4> F A C E F C</h4> 
+        </div>
+        </div> 
+        <div id= "block_list" class="SevenNote">
+            <div class="draggable" id= "GECACEG">
+            <h4> G E C A C E G </h4>
+        </div>
+        <div class="draggable" id= "ADGBCGE">
+            <h4> A D G B C G E</h4>
+        </div>
     </div>
 </div>
 </div>
     <div class = "Scroller">
+        <div class = "BeatDropBar" id = "Custom">
+            <div class="droppable2" > <h5> Drag beats here</h5></div>
+            <div class = "droppable2" ><h5> Drag beats here </h5></div>
+            <div class = "droppable2" ><h5> Drag beats here</h5></div>
+            <div class="droppable2" ><h5> Drag beats here</h5></div>
+            <div class = "droppable2" ><h5>Drag beats here </h5></div>
+            <div class = "droppable2" ><h5> Drag beats here</h5></div>
+            <div class="droppable2"  ><h5> Drag beats here</h5></div>
+            <div class = "droppable2"><h5>Drag beats here </h5></div>
+            <div class = "droppable2"><h5> Drag beats here</h5></div>
+            <div class="droppable2" ><h5> Drag beats here</h5></div>
+            <div class = "droppable2"><h5>Drag beats here </h5></div>
+            <div class = "droppable2"><h5> Drag beats here</h5></div>
+        </div>
         <div class = "beat" id = "Disney">
             <div class = "measure">
                 <div class = "QuarterNote"></div>

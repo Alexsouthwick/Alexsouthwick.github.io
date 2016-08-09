@@ -148,6 +148,10 @@ margin-top: -10px;
     height:300px;
     margin-left:-150px;
 }
+#img4 img{
+    width: 900px;
+    margin-left: -100px;
+}
 
 .photo img{
     margin-top: 100px;
