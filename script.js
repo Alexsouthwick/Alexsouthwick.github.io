@@ -229,7 +229,7 @@ $(document).ready(function() {
                 // console.log(combined_width);
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
-                alert("You have just made a rhythm for one measure. Now to add notes! Click the number in the sidebar that corresponds with the number of black rectangles on the block that you dragged for the rhythm.")
+                alert("You have just made a rhythm for one measure! Now to add notes! Click the number in the sidebar that corresponds with the number of black rectangles on the block that you dragged for the rhythm.")
             }
 
             if (draggableid == "-- -- -- --"){
@@ -317,8 +317,8 @@ $(document).ready(function() {
     $("#Allegro").hide();
     $("#Custom").hide();
 
-        alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
-        );
+        // alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
+        // );
     
     $('.DisneyButton').click(function(){
         Disney_clicked = "clicked";
@@ -372,162 +372,6 @@ $(document).ready(function() {
             $(".CustomButton").removeClass("CustomSelected");
         }
     })
-
-
-
-    // $( "#C" ).mouseenter(function() {
-    //     var conductor = new BandJS();
-    //     conductor.setTimeSignature(4,4);
-    //     var piano = conductor.createInstrument();
-    //     piano.note('quarter', 'C4');
-    //     var player = conductor.finish();
-    //     player.play();
-    // });
-
-    // $( "#B" ).mouseenter(function() {
-    //     var conductor = new BandJS();
-    //     conductor.setTimeSignature(4,4);
-    //     var piano = conductor.createInstrument();
-    //     piano.note('quarter', 'B4');
-    //     var player = conductor.finish();
-    //     player.play();
-    // });
-
-
-    $("#CE").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#AF").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'A4');
-        piano.note('quarter', 'F4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#AFG").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'A4');
-        piano.note('quarter', 'F4');
-        piano.note('quarter', 'G4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#CED").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'D4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#CGEB").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'B4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#DEGC").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'D4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'C4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#CEGCE").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#DAGCA").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'D4');
-        piano.note('quarter', 'A4');
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'A4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#CEGCEG").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'G4');
-        var player = conductor.finish();
-        player.play();
-    });
-    $("#FACEFC").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'F4');
-        piano.note('quarter', 'A4');
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'F4');
-        piano.note('quarter', 'C4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-    $("#GECACEG").mouseenter(function(){
-        var conductor = new BandJS();
-        conductor.setTimeSignature(4,4);
-        var piano = conductor.createInstrument();
-        piano.note('quarter', 'G4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'A4');
-        piano.note('quarter', 'C4');
-        piano.note('quarter', 'E4');
-        piano.note('quarter', 'G4');
-        var player = conductor.finish();
-        player.play();
-    });
-
-
 
     document.getElementById('PlayButton').onclick = function() {
         if (Disney_selected == true){
@@ -758,5 +602,7 @@ $(document).ready(function() {
             $("#BeatsButton").removeClass("NoteSelectionSelected");
         }
     });
-   
+   alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
+        );
+    
 });
