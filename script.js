@@ -317,12 +317,10 @@ $(document).ready(function() {
     $("#Allegro").hide();
     $("#Custom").hide();
 
-        // alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
-        // );
-    
+  
     $('.DisneyButton').click(function(){
         Disney_clicked = "clicked";
-        if (Disney_clicked == "clicked" && Disney_selected == false && Allegro_selected == false){
+        if (Disney_clicked == "clicked" && Disney_selected == false && Allegro_selected == false && Custom_selected == false){
             $(".DisneyButton").addClass("ButtonSelected");
             Disney_selected = true;
             Disney_clicked = "notclicked";
@@ -341,13 +339,13 @@ $(document).ready(function() {
 
     $('.AllegroButton').click(function(){
         var Allegro_clicked = "clicked";
-        if (Allegro_clicked == "clicked" && Allegro_selected == false && Disney_selected == false){
+        if (Allegro_clicked == "clicked" && Allegro_selected == false && Disney_selected == false && Custom_selected == false){
             $(".AllegroButton").addClass("ButtonSelected");
             Allegro_selected = true;
             Allegro_clicked = "notclicked";
             $("#Allegro").show();
             $("#BeatsButton").hide();
-                  alert(" Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
+                  alert(" Now that you have selected your rhythm, you can begin to choose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
         if (Allegro_clicked == "clicked" && Allegro_selected == true){
             Allegro_selected = false;
@@ -359,7 +357,7 @@ $(document).ready(function() {
     $('.CustomButton').click(function(){
         var Custom_clicked = "clicked";
         if (Custom_clicked == "clicked" && Custom_selected == false && Allegro_selected == false && Disney_selected == false){
-            $(".CustomButton").addClass("CustomSelected");
+            $(".CustomButton").addClass("ButtonSelected");
             Custom_selected = true;
             Custom_clicked = "notclicked";
             $("#Custom").show();
@@ -369,7 +367,7 @@ $(document).ready(function() {
         if (Custom_clicked == "clicked" && Custom_selected == true){
             Custom_selected = false;
             $("#Custom").hide();
-            $(".CustomButton").removeClass("CustomSelected");
+            $(".CustomButton").removeClass("ButtonSelected");
         }
     })
 
