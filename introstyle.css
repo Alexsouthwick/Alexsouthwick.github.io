@@ -1,3 +1,7 @@
+body{
+    background-image: url("http://il3.picdn.net/shutterstock/videos/13000349/thumb/10.jpg");
+}
+
 .navigation{
     background-color: #1A5276;
     height: 90px;
@@ -29,10 +33,6 @@
 
 body {
     background-color: #85C1E9;
-}
-
-body {
-    background-image: url("http://il3.picdn.net/shutterstock/videos/13000349/thumb/10.jpg"); 
 }
 
 h1{
@@ -70,21 +70,17 @@ h2{
     padding-top: 30px;
     padding-bottom: -10px;
     font-size:30px;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 }
 .paragraph{
     width:450px;
     margin-left: 445px;
-    background-color: red;
-    color:red;
 }
 
 p{
     text-align: center;
 }
-
 #entry{
     margin-top: -30px;
     padding: 20px;
@@ -95,8 +91,8 @@ p{
     width:50%;
     height: auto;
     margin-left: 350px;
-    border: 3px solid black;
-    opacity: 0.8;
+    border: 3px solid #2574A9;
+    margin-top: 20px;
 
 
 }
@@ -137,8 +133,6 @@ button{
 .journal_entry{
     margin:10px;
     background-color: white;
-    border-radius: 2%;
-    border:2px solid black;  
 }
 
 .JournalImage img{
@@ -154,10 +148,6 @@ margin-top: -10px;
     height:300px;
     margin-left:-150px;
 }
-#img4 img{
-    width: 900px;
-    margin-left: -100px;
-}
 
 .photo img{
     margin-top: 100px;
@@ -170,6 +160,7 @@ margin-top: -10px;
     transform: rotate(90deg);
     margin-left: 470px;
     border:2px solid black; 
+    center:auto;
 
 }
 
@@ -179,4 +170,5 @@ margin-top: -10px;
     background-color: white;
     border-radius: 4%;
     border:2px solid black;
+    center:auto;
 }
