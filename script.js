@@ -1,4 +1,3 @@
-
 $(".draggable").draggable({
     helper: 'clone'
 });
@@ -50,17 +49,12 @@ $(document).ready(function() {
     $(".droppable").droppable({
          drop: function(event, ui) {
             $(this)
-            // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
+   
              .addClass("highlighted")
              highlight= true;
              console.log(highlight);
              console.log("something should be happening");
              if (highlight == true) {
-                // var width= $(".draggable").width();
-                // $("#blocks_list").append("<li> block </li>");
-                // console.log($("#blocks_list li").length);
-                // combined_width= ((width) * ($("#blocks_list li").length));
-                // console.log(combined_width);
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
                 console.log(droppableid);
@@ -106,12 +100,12 @@ $(document).ready(function() {
 
 
 
-                if (draggableid == 'C G E B'){
+                if (draggableid == 'CGEB'){
                     song += "cgeb"; 
                     console.log('song: ', song);  
                 }
 
-                else if (draggableid=="F G B A"){
+                else if (draggableid=="FGBA"){
                     song += "fgba"; 
                     console.log(song);  
                 }
@@ -140,6 +134,9 @@ $(document).ready(function() {
                  song += "a"; 
                  console.log(song);  
                  }
+
+                 else if (draggableid=="CE"){
+
                  else if (draggableid=="C E"){
                  song += "ce"; 
                  console.log(song);  
@@ -148,6 +145,17 @@ $(document).ready(function() {
                  song += "af"; 
                  console.log(song);  
                  }
+
+                 else if (draggableid=="EG"){
+                 song += "eg"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="FB"){
+                 song += "fb"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="AFG"){
+
                  else if (draggableid=="E G"){
                  song += "eg"; 
                  console.log(song);  
@@ -157,6 +165,7 @@ $(document).ready(function() {
                  console.log(song);  
                  }
                  else if (draggableid=="A F G"){
+
                  song += "afg"; 
                  console.log(song);  
                  }
@@ -180,6 +189,17 @@ $(document).ready(function() {
                  song += "dagca"; 
                  console.log(song);  
                  }
+
+                 else if (draggableid=="FBACE"){
+                 song += "fbace"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="ADFGC"){
+                 song += "adfgc"; 
+                 console.log(song);  
+                 }
+                 else if (draggableid=="CEGCEG"){
+
                  else if (draggableid=="F B A C E"){
                  song += "fbace"; 
                  console.log(song);  
@@ -187,8 +207,7 @@ $(document).ready(function() {
                  else if (draggableid=="A D F G C"){
                  song += "adfgc"; 
                  console.log(song);  
-                 }
-                 else if (draggableid=="C E G C E G"){
+
                  song += "cegceg"; 
                  console.log(song);  
                  }
@@ -217,12 +236,37 @@ $(document).ready(function() {
     $(".droppable2").droppable({
          drop: function(event, ui) {
             $(this)
+
             // $(ui.draggable).detach().css({top:0, left: 0}).appendTo(this);
+
              .addClass("highlighted")
              highlight= true;
              console.log(highlight);
              console.log("something should be happening");
              if (highlight == true) {
+
+                var droppableid= $(this).attr("id");
+                var draggableid= ui.draggable.attr("id");
+            };
+            if (draggableid == "qqqq"){
+                custombeatstring += "qqqq";
+            };
+            if (draggableid == "w"){
+                custombeatstring += "w";
+            };
+            if (draggableid == "hh"){
+                custombeatstring += "hh";
+            }
+            if (draggableid == "heeq"){
+                custombeatstring += "heeq";
+            }
+            if (draggableid == "qeeeeq"){
+                custombeatstring += "qeeeqq";
+            }
+            if (draggableid == "hqq"){
+                custombeatstring += "hqq";
+            }
+
                 // var width= $(".draggable").width();
                 // $("#blocks_list").append("<li> block </li>");
                 // console.log($("#blocks_list li").length);
@@ -309,12 +353,16 @@ $(document).ready(function() {
             }
 
 
+
         }
     });
 
     $("#Disney").hide();
     $("#Allegro").hide();
     $("#Custom").hide();
+
+
+        alert("Instructions: To begin your song, click one of the rhythms below."
 
         alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
         );
@@ -362,6 +410,7 @@ $(document).ready(function() {
             Custom_selected = true;
             Custom_clicked = "notclicked";
             $("#Custom").show();
+
             alert("To begin creating your own rhythm, click the 'Beat' button in the sidebar.")
         }
         if (Custom_clicked == "clicked" && Custom_selected == true){
@@ -390,6 +439,7 @@ $(document).ready(function() {
     //     var player = conductor.finish();
     //     player.play();
     // });
+
 
     $("#CE").mouseenter(function(){
         var conductor = new BandJS();
