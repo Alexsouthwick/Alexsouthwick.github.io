@@ -26,6 +26,7 @@ h5{
     font-size: 20px;
 }
 
+
 h3{
     /*color: #85C1E9;*/
     color:black;
@@ -207,7 +208,7 @@ button {
 }
 
 .Scroller{
-    width: 950px;
+    width: 900px;
     height: 180px;
     overflow: scroll;
     white-space: nowrap;
@@ -337,3 +338,10 @@ button:hover{
     background-color: #1B2631;
 }
 
+.beatsDragged {
+    background-color: red;
+    color:blue;
+    font-size: 50px;
+    font-weight: bolder;
+
+}

@@ -230,25 +230,85 @@ $(document).ready(function() {
                 // console.log(combined_width);
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
-            };
-            if (draggableid == "qqqq"){
+                alert("You have just made a rhythm for one measure. Now to add notes! Click the number in the sidebar that corresponds with the number of black rectangles on the block that you dragged for the rhythm.")
+            }
+            if (draggableid == "-- -- -- --"){
                 custombeatstring += "qqqq";
-            };
-            if (draggableid == "w"){
+            }
+            else if (draggableid == "--------"){
                 custombeatstring += "w";
-            };
-            if (draggableid == "hh"){
+            }
+            else if (draggableid == "---- ----"){
                 custombeatstring += "hh";
             }
-            if (draggableid == "heeq"){
+            else if (draggableid == "---- - - --"){
                 custombeatstring += "heeq";
             }
-            if (draggableid == "qeeeeq"){
+            else if (draggableid == "-- - - - -- --"){
                 custombeatstring += "qeeeqq";
             }
-            if (draggableid == "hqq"){
+            else if (draggableid == "---- -- --"){
                 custombeatstring += "hqq";
             }
+
+            if (droppableid == "beat1"){
+                $(this).addClass ("beatsDragged");
+                $("#beat1 h5").text(draggableid);
+            }
+            if (droppableid == "beat2"){
+                $("#beat2 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+            if (droppableid == "beat3"){
+                $("#beat3 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+            if (droppableid == "beat4"){
+                $("#beat4 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat5"){
+                $("#beat5 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat6"){
+                $("#beat6 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat7"){
+                $("#beat7 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat8"){
+                $("#beat8 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat9"){
+                $("#beat9 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat10"){
+                $("#beat10 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat11"){
+                $("#beat11 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+            if (droppableid == "beat12"){
+                $("#beat12 h5").text(draggableid);
+                $(this).addClass ("beatsDragged");
+            }
+
+
         }
     });
 
@@ -256,7 +316,7 @@ $(document).ready(function() {
     $("#Allegro").hide();
     $("#Custom").hide();
 
-        alert("Instructions: To begin your song, click one of the rhythms below."
+        alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
         );
     
     $('.DisneyButton').click(function(){
@@ -302,6 +362,7 @@ $(document).ready(function() {
             Custom_selected = true;
             Custom_clicked = "notclicked";
             $("#Custom").show();
+            alert("To begin creating your own rhythm, click the 'Beat' button in the sidebar.")
         }
         if (Custom_clicked == "clicked" && Custom_selected == true){
             Custom_selected = false;
