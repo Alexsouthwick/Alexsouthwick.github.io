@@ -452,6 +452,7 @@ $(document).ready(function() {
     }
     document.getElementById('clear').onclick = function() {
         song = "";
+        custombeatstring = "";
         beatstring = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h4").text("Drag Here");
