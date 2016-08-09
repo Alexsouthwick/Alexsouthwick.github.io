@@ -338,9 +338,3 @@ button {
 button:hover{
     background-color: #1B2631;
 }
-
-.beatsDragged{
-background-color: #E05206;
-font-color:blue;
-font-size: 100px;
-}
