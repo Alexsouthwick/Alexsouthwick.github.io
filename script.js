@@ -58,9 +58,9 @@ $(document).ready(function() {
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
                 console.log(droppableid);
-                alert("You have just created a measure of a song! Keep dragging and dropping blocks with the same number of notes as the black squares above. Once you are done you can play your brand new song! If you want to clear your whole song, click the clear button.")
-                alert("Disclaimer: Due to problems with the API we used, the play song button can only be used 6 times. We are working on a fix for this.")
-                alert("Once you have read all of the intructions, click the box that says 'Prevent this page from creating additional dialogs'. Have fun creating music with Cadenza!")
+                // alert("You have just created a measure of a song! Keep dragging and dropping blocks with the same number of notes as the black squares above. Once you are done you can play your brand new song! If you want to clear your whole song, click the clear button.")
+                // alert("Disclaimer: Due to problems with the API we used, the play song button can only be used 6 times. We are working on a fix for this.")
+                // alert("Once you have read all of the intructions, click the box that says 'Prevent this page from creating additional dialogs'. Have fun creating music with Cadenza!")
                 if (droppableid == "block1"){
                     $("#block1 h4").text(draggableid);
                 }
@@ -123,7 +123,10 @@ $(document).ready(function() {
                  song += "a"; 
                  console.log(song);  
                  }
-
+                 else if (draggableid=="F"){
+                 song += "f"; 
+                 console.log(song);  
+                 }
                  else if (draggableid=="C E"){
                  song += "ce"; 
                  console.log(song);  
@@ -140,6 +143,10 @@ $(document).ready(function() {
                  else if (draggableid=="F B"){
                  song += "fb"; 
                  console.log(song);  
+                 }
+                 else if (draggableid == "F# E"){
+                    song += "se";
+                    console.log(song);
                  }
                  else if (draggableid=="A F G"){
 
@@ -168,6 +175,9 @@ $(document).ready(function() {
                  song += "degc"; 
                  console.log(song);  
                  }
+                 else if (draggableid == "E D C# D"){
+                    song += "edzd";
+                 }
                  else if (draggableid=="C E G C E"){
                  song += "cegce"; 
                  console.log(song);  
@@ -184,6 +194,15 @@ $(document).ready(function() {
                  else if (draggableid=="A D F G C"){
                  song += "adfgc"; 
                  console.log(song);  
+                 }
+                 else if (draggableid == "F# E G F# D"){
+                    song+= "segsd";
+                 }
+                 else if (draggableid == "E D# F# E C#"){
+                    song += "epsez";
+                 }
+                 else if (draggableid == "B C# E D A"){
+                    song += "bzeda";
                  }
                  else if (draggableid == "C E G C E G"){
                  song += "cegceg"; 
@@ -229,7 +248,7 @@ $(document).ready(function() {
                 // console.log(combined_width);
                 var droppableid= $(this).attr("id");
                 var draggableid= ui.draggable.attr("id");
-                alert("You have just made a rhythm for one measure! Now to add notes! Click the number in the sidebar that corresponds with the number of black rectangles on the block that you dragged for the rhythm.")
+                // alert("You have just made a rhythm for one measure! Now to add notes! Click the number in the sidebar that corresponds with the number of black rectangles on the block that you dragged for the rhythm.");
             }
 
             if (draggableid == "-- -- -- --"){
@@ -316,6 +335,7 @@ $(document).ready(function() {
     $("#Disney").hide();
     $("#Allegro").hide();
     $("#Custom").hide();
+    $("#customchosen").hide();
 
   
     $('.DisneyButton').click(function(){
@@ -326,7 +346,7 @@ $(document).ready(function() {
             Disney_clicked = "notclicked";
             $("#Disney").show();
             $("#BeatsButton").hide();
-            alert("Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
+            // alert("Now that you have selected your rhythm, you can begin to chose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
 
         if (Disney_clicked == "clicked" && Disney_selected == true){
@@ -345,7 +365,7 @@ $(document).ready(function() {
             Allegro_clicked = "notclicked";
             $("#Allegro").show();
             $("#BeatsButton").hide();
-                  alert(" Now that you have selected your rhythm, you can begin to choose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
+                  // alert(" Now that you have selected your rhythm, you can begin to choose your notes. Look at the number of black squares above the first box and click the corresponding number in the sidebar.");
         }
         if (Allegro_clicked == "clicked" && Allegro_selected == true){
             Allegro_selected = false;
@@ -361,12 +381,14 @@ $(document).ready(function() {
             Custom_selected = true;
             Custom_clicked = "notclicked";
             $("#Custom").show();
+            $("#customchosen").show();
 
-            alert("To begin creating your own rhythm, click the 'Beats' button in the sidebar.")
+            // alert("To begin creating your own rhythm, click the 'Beats' button in the sidebar.")
         }
         if (Custom_clicked == "clicked" && Custom_selected == true){
             Custom_selected = false;
             $("#Custom").hide();
+            $("#customchosen").hide();
             $(".CustomButton").removeClass("ButtonSelected");
         }
     })
@@ -394,9 +416,12 @@ $(document).ready(function() {
         var c = "C4";
         var e = "E4";
         var a = "A4";
-        var b = "B4";
+        var b = "B3";
         var d = "D4";
         var f = "F4";
+        var s = "F#4";
+        var p = "D#4";
+        var z = "C#4";
 
         conductor.setTimeSignature(4,4);
         conductor.setMasterVolume(400);
@@ -415,16 +440,25 @@ $(document).ready(function() {
                 note = "E4";
             }
             if (note == "a"){
-                note = "A4";
+                note = "A3";
             }
             if (note == "b"){
-                note = "B4";
+                note = "B3";
             }
             if (note == "d"){
                 note = "D4";
             }
             if (note == "f"){
                 note = "F4";
+            }
+            if (note == "s"){
+                note = "F#4";
+            }
+            if (note == "p"){
+                note = "D#4";
+            }
+            if (note == "z"){
+                note = "C#4";
             }
             var notelength = beatstring.charAt(i);
             if (notelength == "q"){
@@ -452,6 +486,7 @@ $(document).ready(function() {
     }
     document.getElementById('clear').onclick = function() {
         song = "";
+        custombeatstring = "";
         beatstring = "";
         $(".droppable").removeClass("highlighted");
         $(".droppable h4").text("Drag Here");
@@ -477,7 +512,7 @@ $(document).ready(function() {
             One_selected = true;
             One_clicked = "notclicked";
             $(".OneNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order."); 
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order."); 
         }
         if (One_clicked == "clicked" && One_selected == true){
             One_selected = false;
@@ -495,7 +530,7 @@ $(document).ready(function() {
             Two_selected = true;
             Two_clicked = "notclicked";
             $(".TwoNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Two_clicked == "clicked" && Two_selected == true){
             Two_selected = false;
@@ -511,7 +546,7 @@ $(document).ready(function() {
             Three_selected = true;
             Three_clicked = "notclicked";
             $(".ThreeNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Three_clicked == "clicked" && Three_selected == true){
             Three_selected = false;
@@ -527,7 +562,7 @@ $(document).ready(function() {
             Four_selected = true;
             Four_clicked = "notclicked";
             $(".FourNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Four_clicked == "clicked" && Four_selected == true){
             Four_selected = false;
@@ -543,7 +578,7 @@ $(document).ready(function() {
             Five_selected = true;
             Five_clicked = "notclicked";
             $(".FiveNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Five_clicked == "clicked" && Five_selected == true){
             Five_selected = false;
@@ -559,7 +594,7 @@ $(document).ready(function() {
             Six_selected = true;
             Six_clicked = "notclicked";
             $(".SixNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Six_clicked == "clicked" && Six_selected == true){
             Six_selected = false;
@@ -575,7 +610,7 @@ $(document).ready(function() {
             Seven_selected = true;
             Seven_clicked = "notclicked";
             $(".SevenNote").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (Seven_clicked == "clicked" && Seven_selected == true){
             Seven_selected = false;
@@ -587,20 +622,20 @@ $(document).ready(function() {
     $('#BeatsButton').click(function(){
         var BeatsButton_clicked = "clicked";
         if (BeatsButton_clicked == "clicked" && BeatsButton_selected == false){
-            $("#BeatsButton").addClass("NoteSelectionSelected");
+            $("#BeatsButton").addClass("NoteSelection2Selected");
             BeatsButton_selected = true;
             BeatsButton_clicked = "notclicked";
             $(".Beats").show();
-            alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
+            // alert("Drag and drop one of the blocks into the first box. Please place your blocks in order.");
         }
         if (BeatsButton_clicked == "clicked" && BeatsButton_selected == true){
             BeatsButton_selected = false;
             BeatsButton_clicked = "notclicked";
             $(".Beats").hide();
-            $("#BeatsButton").removeClass("NoteSelectionSelected");
+            $("#BeatsButton").removeClass("NoteSelection2Selected");
         }
     });
-   alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
-        );
+   // alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."
+   //      );
     
 });
