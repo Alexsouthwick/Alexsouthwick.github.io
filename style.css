@@ -191,6 +191,16 @@ li a:hover {
 .draggable:hover{
     background-color: #081555;
 }
+
+.instructions{
+    width:400px;
+    margin-top: -40px;
+    padding-bottom: 35px;
+}
+#title{
+    margin-left: 150px;
+}
+
 .Sidebar{
     width: 330px;
     height: 800px;
