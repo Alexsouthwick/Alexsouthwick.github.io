@@ -591,7 +591,7 @@ $(document).ready(function() {
     $('#BeatsButton').click(function(){
         var BeatsButton_clicked = "clicked";
         if (BeatsButton_clicked == "clicked" && BeatsButton_selected == false){
-            $("#BeatsButton").addClass("NoteSelectionSelected");
+            $("#BeatsButton").addClass("NoteSelection2Selected");
             BeatsButton_selected = true;
             BeatsButton_clicked = "notclicked";
             $(".Beats").show();
@@ -601,7 +601,7 @@ $(document).ready(function() {
             BeatsButton_selected = false;
             BeatsButton_clicked = "notclicked";
             $(".Beats").hide();
-            $("#BeatsButton").removeClass("NoteSelectionSelected");
+            $("#BeatsButton").removeClass("NoteSelection2Selected");
         }
     });
    // alert("Instructions: To begin your song, click one of the rhythms below. You can chose one of the preset rhythms or make your own measure by measure."

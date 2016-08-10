@@ -195,7 +195,12 @@ li a:hover {
 .instructions{
     width:400px;
     margin-top: -40px;
-    padding-bottom: 35px;
+    /*padding-bottom: 35px;*/
+    border:2px solid black;
+    height:320px;
+    margin-bottom: -230px;
+    background-color: #e6f9ff;
+    border-radius: 10%;
 }
 #title{
     margin-left: 150px;
@@ -247,6 +252,15 @@ li a:hover {
 
 .NoteSelectionSelected{
     width: 30px;
+    height: 20px;
+    background-color: #1B2631;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.NoteSelection2Selected{
+    width: 35px;
     height: 20px;
     background-color: #1B2631;
     display: inline-block;
