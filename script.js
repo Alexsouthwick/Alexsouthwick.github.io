@@ -123,7 +123,10 @@ $(document).ready(function() {
                  song += "a"; 
                  console.log(song);  
                  }
-
+                 else if (draggableid=="F"){
+                 song += "f"; 
+                 console.log(song);  
+                 }
                  else if (draggableid=="C E"){
                  song += "ce"; 
                  console.log(song);  
@@ -140,6 +143,10 @@ $(document).ready(function() {
                  else if (draggableid=="F B"){
                  song += "fb"; 
                  console.log(song);  
+                 }
+                 else if (draggableid == "F# E"){
+                    song += "se";
+                    console.log(song);
                  }
                  else if (draggableid=="A F G"){
 
@@ -168,6 +175,9 @@ $(document).ready(function() {
                  song += "degc"; 
                  console.log(song);  
                  }
+                 else if (draggableid == "E D C# D"){
+                    song += "edzd";
+                 }
                  else if (draggableid=="C E G C E"){
                  song += "cegce"; 
                  console.log(song);  
@@ -184,6 +194,15 @@ $(document).ready(function() {
                  else if (draggableid=="A D F G C"){
                  song += "adfgc"; 
                  console.log(song);  
+                 }
+                 else if (draggableid == "F# E G F# D"){
+                    song+= "segsd";
+                 }
+                 else if (draggableid == "E D# F# E C#"){
+                    song += "epsez";
+                 }
+                 else if (draggableid == "B C# E D A"){
+                    song += "bzeda";
                  }
                  else if (draggableid == "C E G C E G"){
                  song += "cegceg"; 
@@ -394,9 +413,12 @@ $(document).ready(function() {
         var c = "C4";
         var e = "E4";
         var a = "A4";
-        var b = "B4";
+        var b = "B3";
         var d = "D4";
         var f = "F4";
+        var s = "F#4";
+        var p = "D#4";
+        var z = "C#4";
 
         conductor.setTimeSignature(4,4);
         conductor.setMasterVolume(400);
@@ -415,16 +437,25 @@ $(document).ready(function() {
                 note = "E4";
             }
             if (note == "a"){
-                note = "A4";
+                note = "A3";
             }
             if (note == "b"){
-                note = "B4";
+                note = "B3";
             }
             if (note == "d"){
                 note = "D4";
             }
             if (note == "f"){
                 note = "F4";
+            }
+            if (note == "s"){
+                note = "F#4";
+            }
+            if (note == "p"){
+                note = "D#4";
+            }
+            if (note == "z"){
+                note = "C#4";
             }
             var notelength = beatstring.charAt(i);
             if (notelength == "q"){
