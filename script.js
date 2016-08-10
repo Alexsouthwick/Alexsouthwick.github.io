@@ -269,6 +269,9 @@ $(document).ready(function() {
             else if (draggableid == "---- -- --"){
                 custombeatstring += "hqq";
             }
+            else if (draggableid == "-- -- ----"){
+                custombeatstring += "qqh";
+            }
 
             if (droppableid == "beat1"){
                 $(this).addClass ("beatsDragged");
