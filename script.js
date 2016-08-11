@@ -120,7 +120,7 @@ $(document).ready(function() {
                  console.log(song);  
                  }
                  else if (draggableid=="A"){
-                 song += "a"; 
+                 song += "i"; 
                  console.log(song);  
                  }
                  else if (draggableid=="F"){
@@ -202,7 +202,7 @@ $(document).ready(function() {
                     song += "epsez";
                  }
                  else if (draggableid == "B C# E D A"){
-                    song += "bzeda";
+                    song += "bzedi";
                  }
                  else if (draggableid == "C E G C E G"){
                  song += "cegceg"; 
@@ -422,6 +422,7 @@ $(document).ready(function() {
         var s = "F#4";
         var p = "D#4";
         var z = "C#4";
+        var i = "A3";
 
         conductor.setTimeSignature(4,4);
         conductor.setMasterVolume(400);
@@ -440,7 +441,7 @@ $(document).ready(function() {
                 note = "E4";
             }
             if (note == "a"){
-                note = "A3";
+                note = "A4";
             }
             if (note == "b"){
                 note = "B3";
@@ -459,6 +460,9 @@ $(document).ready(function() {
             }
             if (note == "z"){
                 note = "C#4";
+            }
+            if (note == "i"){
+                note = "A3";
             }
             var notelength = beatstring.charAt(i);
             if (notelength == "q"){
